@@ -342,6 +342,7 @@ download.file(
 ---
 
 class: inverse, center, middle
+
 # Processing Data
 
 ---
@@ -511,11 +512,12 @@ On average, there are around 32 (*SD* = 8.61) students in each teachers' class.
 ---
 
 class: inverse, center, middle
+
 # Demo doc (part 1): Try it out!
 
-*Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
+* Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
 
-*The doc is [here](https://github.com/jrosen48/MTSU-workshop/blob/master/demo-doc.Rmd) in the repository*
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 
@@ -658,6 +660,7 @@ ggplot(student_mot_vars,
 ---
 
 class: inverse, center, middle
+
 # Demo doc (part 2)
 
 *The doc is [here](https://github.com/jrosen48/MTSU-workshop/blob/master/demo-doc.Rmd) in the repository*
@@ -723,6 +726,7 @@ m2_mlm
 ---
 
 class: inverse, center, middle
+
 # Demo doc (part 3)
 
 *The doc is [here](https://github.com/jrosen48/MTSU-workshop/blob/master/demo-doc.Rmd) in the repository*
@@ -730,6 +734,7 @@ class: inverse, center, middle
 ---
 
 class: inverse, center, middle
+
 # Learning and doing more with R
 
 ---
@@ -807,6 +812,7 @@ With one exception, can install via `install.packages(<name-of-package)`, i.e., 
 ---
 
 class: inverse, center, middle
+
 # Questions?
 
 The repository for this workshop is [here](https://github.com/bretsw/aect19-workshop).
