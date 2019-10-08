@@ -1,6 +1,6 @@
 ---
 title: "Online Data and Open Source Tools: Analyzing Educational Internet Data Using R"
-subtitle: "#aect19inspired"
+subtitle: "AECT 2019"
 author: "Bret Staudt Willet, Spencer Greenhalgh, & Joshua Rosenberg"
 date: "2019-10-23"
 output:
@@ -20,23 +20,23 @@ options(htmltools.dir.version = FALSE)
 
 library(knitr)
 library(tidyverse)
+library(xaringan)
 ```
 
 # Who We Are
 
-.pull-left[
-* Bret Staudt Willet
-  * PhD Candidate, Educational Psychology & Educational Technology, Michigan State University
-  * Primary area of interest: social media and K-20 educators' ongoing professional learning
-* Dr. Spencer Greenhalgh
+* **Bret Staudt Willet**
+  * PhD Candidate, Ed Psych & Ed Tech, Michigan State University
+  * *Primary area of interest:* social media and K-20 educators' professional learning
+* **Dr. Spencer Greenhalgh**
   * Assistant Professor, Information Communication Technology, University of Kentucky
-  * Primary area of interest: digital contexts for teaching, learning, and other meaningful practices
-* Dr. Joshua Rosenberg
+  * *Primary area of interest:* digital contexts for teaching, learning, and other meaningful practices
+* **Dr. Joshua Rosenberg**
   * Assistant Professor, STEM Education, University of Tennessee, Knoxville
-  * Primary area of interest: data science in education + data science education
-]
+  * *Primary area of interest:* data science in education + data science education
 
-```{r, out.width = "350px", echo = FALSE, fig.align = "center"}
+
+```{r, out.width = "360px", echo = FALSE, fig.align = "center"}
 include_graphics("koehler-diaspora-circa-2017.jpg")
 ```
 

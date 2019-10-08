@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>An Introduction to Data Science in Education in Education Using R</title>
+    <title>Online Data and Open Source Tools: Analyzing Educational Internet Data Using R</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Joshua Rosenberg" />
-    <meta name="date" content="2019-09-05" />
+    <meta name="author" content="Bret Staudt Willet, Spencer Greenhalgh, &amp; Joshua Rosenberg" />
+    <meta name="date" content="2019-10-23" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
@@ -14,27 +14,30 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# An Introduction to Data Science in Education in Education Using R
-### Joshua Rosenberg
-### 2019-09-05
+# Online Data and Open Source Tools: Analyzing Educational Internet Data Using R
+## AECT 2019
+### Bret Staudt Willet, Spencer Greenhalgh, &amp; Joshua Rosenberg
+### 2019-10-23
 
 ---
 
 
 
 
-# #whoami1
+# Who We Are
 
-.pull-left[
-* Dr. Joshua Rosenberg
-* Assistant Professor, STEM Education, University of Tennessee, Knoxville
-* Dad (one-year-old toddler!)
-* Primary areas of interest
-  * Data science in education
-  * Data science education
-]
+* **Bret Staudt Willet**
+  * PhD Candidate, Ed Psych &amp; Ed Tech, Michigan State University
+  * *Primary area of interest:* social media and K-20 educators' professional learning
+* **Dr. Spencer Greenhalgh**
+  * Assistant Professor, Information Communication Technology, University of Kentucky
+  * *Primary area of interest:* digital contexts for teaching, learning, and other meaningful practices
+* **Dr. Joshua Rosenberg**
+  * Assistant Professor, STEM Education, University of Tennessee, Knoxville
+  * *Primary area of interest:* data science in education + data science education
 
-&lt;img src="img/kr-joro.jpg" width="350px" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="koehler-diaspora-circa-2017.jpg" width="360px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -156,6 +159,7 @@ vignette("dplyr", package = "dplyr")
 ```
 
 These are also available through CRAN (i.e., https://cran.r-project.org/web/packages/dplyr/index.html)
+
 ---
 
 # Using a specific function
@@ -220,6 +224,7 @@ library(tidyverse)
 class: inverse, center, middle
 
 # Computer science foundations
+
 ---
 
 # Data structures
@@ -315,16 +320,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##     var1 var2   
 ##    &lt;dbl&gt; &lt;chr&gt;  
-##  1 0.111 lesser 
-##  2 0.578 greater
-##  3 0.415 lesser 
-##  4 0.906 greater
-##  5 0.518 greater
-##  6 0.684 greater
-##  7 0.435 lesser 
-##  8 0.812 greater
-##  9 0.137 lesser 
-## 10 0.796 greater
+##  1 0.593 greater
+##  2 0.175 lesser 
+##  3 0.164 lesser 
+##  4 0.136 lesser 
+##  5 0.590 greater
+##  6 0.545 greater
+##  7 0.450 lesser 
+##  8 0.397 lesser 
+##  9 0.103 lesser 
+## 10 0.597 greater
 ```
 
 ---
@@ -348,19 +353,20 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##     var1 var2       
 ##    &lt;dbl&gt; &lt;chr&gt;      
-##  1 0.111 very little
-##  2 0.578 greater    
-##  3 0.415 lesser     
-##  4 0.906 a lot      
-##  5 0.518 greater    
-##  6 0.684 greater    
-##  7 0.435 lesser     
-##  8 0.812 a lot      
-##  9 0.137 very little
-## 10 0.796 a lot
+##  1 0.593 greater    
+##  2 0.175 very little
+##  3 0.164 very little
+##  4 0.136 very little
+##  5 0.590 greater    
+##  6 0.545 greater    
+##  7 0.450 lesser     
+##  8 0.397 lesser     
+##  9 0.103 very little
+## 10 0.597 greater
 ```
 
 ---
+
 # Objects, functions, directories, and data structures
 
 Here's a short URL: `https://goo.gl/bUeMhV`
@@ -424,8 +430,11 @@ download.file(
 ```
 
 ---
+
 class: inverse, center, middle
+
 # Processing Data
+
 ---
 
 # The pipe: %&gt;% 
@@ -661,11 +670,12 @@ On average, there are around 32 (*SD* = 8.61) students in each teachers' class.
 ---
 
 class: inverse, center, middle
+
 # Demo doc (part 1): Try it out!
 
-*Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
+* Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
 
-*The doc is [here](https://github.com/jrosen48/MTSU-workshop/blob/master/demo-doc.Rmd) in the repository*
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 
@@ -784,7 +794,7 @@ student_mot_vars &lt;- # save object student_mot_vars by...
 
 Notice the three parts of all `ggplot2` graphs: a) the data (`student_mot_vars`), b) an `aes()`thetic mapping, and c) a `geom`:
 
-&lt;img src="mtsu-workshop-2019_files/figure-html/unnamed-chunk-43-1.png" width="450px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-43-1.png" width="450px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -798,8 +808,10 @@ ggplot(student_mot_vars,
   geom_smooth(method = "lm")
 ```
 
-&lt;img src="mtsu-workshop-2019_files/figure-html/unnamed-chunk-44-1.png" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-44-1.png" width="350px" style="display: block; margin: auto;" /&gt;
+
 ---
+
 # Cleaning up
 
 
@@ -813,13 +825,15 @@ ggplot(student_mot_vars,
   ylab("Student Broad Interest")
 ```
 
-&lt;img src="mtsu-workshop-2019_files/figure-html/unnamed-chunk-45-1.png" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-45-1.png" width="350px" style="display: block; margin: auto;" /&gt;
+
 ---
 
 class: inverse, center, middle
+
 # Demo doc (part 2)
 
-*The doc is [here](https://github.com/jrosen48/MTSU-workshop/blob/master/demo-doc.Rmd) in the repository*
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 
@@ -954,16 +968,19 @@ m2_mlm
 ##                        student_joy  student_broad_interest:student_joy  
 ##                            0.27409                             0.01991
 ```
+
 ---
 
 class: inverse, center, middle
+
 # Demo doc (part 3)
 
-*The doc is [here](https://github.com/jrosen48/MTSU-workshop/blob/master/demo-doc.Rmd) in the repository*
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+
 ---
 
-
 class: inverse, center, middle
+
 # Learning and doing more with R
 
 ---
@@ -1035,24 +1052,35 @@ With one exception, can install via `install.packages(&lt;name-of-package)`, i.e
 - [Gabriela de Quieroz](https://twitter.com/gdequeiroz)
 - [Emily Bovee](https://twitter.com/ebovee09)
 - [Joshua Rosenberg](https://twitter.com/jrosenberg6432)
+- [Spencer Greenhalgh](https://twitter.com/spgreenhalgh)
+- [Bret Staudt Willet](https://twitter.com/bretsw)
 
 ---
 
 class: inverse, center, middle
+
 # Questions?
 
-The repository for this workshop is [here](https://github.com/jrosen48/MTSU-workshop).
+The repository for this workshop is [here](https://github.com/bretsw/aect19-workshop).
 
 ---
 
-# Acknowlegment
+# Acknowledgments
 
-This presentation is based on one given with Dr. Emily Bovee: https://github.com/jrosen48/MSU-workshop-2019
+Thank you to [Joshua Rosenberg](https://github.com/jrosen48/) and [Emily Bovee](https://github.com/emilybovee) for developing the workshops this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
+
+Parts of the content for this workshop are also adapted from:
+
+- The [*Data Science in Education Using R* book](https://github.com/data-edu/data-science-in-education) by Emily A. Bovee, Ryan A. Estrellado, Jesse Mostipak, Joshua M. Rosenberg, and Isabella C. Velásquez to be published by Routledge in 2020 
+- An American Educational Research Association 2019 annual meeting [workshop on *Reproducible and transparent research with R*](https://github.com/ResearchTransparency/rr_aera19) by [Daniel Anderson](https://github.com/datalorax]) and [Joshua Rosenberg](https://github.com/jrosen48/)
+
+Finally, parts of the content for this workshop are inspired from content associated with the [Data Science Specialization for UO COE](https://github.com/uo-datasci-specialization) (led by [Daniel Anderson](https://github.com/datalorax]))
 
 ---
+
 # Contact
 
-- [Joshua Rosenberg](mailto:jmrosenberg@utk.edu)
+- [Bret Staudt Willet](mailto:staudtwi@msu.edu)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -1099,7 +1127,24 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 (function() {
