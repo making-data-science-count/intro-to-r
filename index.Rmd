@@ -22,19 +22,22 @@ library(knitr)
 library(tidyverse)
 ```
 
-# #whoami1
+# Who We Are
 
 .pull-left[
+* Bret Staudt Willet
+  * PhD Candidate, Educational Psychology & Educational Technology, Michigan State University
+  * Primary area of interest: social media and K-20 educators' ongoing professional learning
+* Dr. Spencer Greenhalgh
+  * Assistant Professor, Information Communication Technology, University of Kentucky
+  * Primary area of interest: digital contexts for teaching, learning, and other meaningful practices
 * Dr. Joshua Rosenberg
-* Assistant Professor, STEM Education, University of Tennessee, Knoxville
-* Dad (one-year-old toddler!)
-* Primary areas of interest
-  * Data science in education
-  * Data science education
+  * Assistant Professor, STEM Education, University of Tennessee, Knoxville
+  * Primary area of interest: data science in education + data science education
 ]
 
 ```{r, out.width = "350px", echo = FALSE, fig.align = "center"}
-include_graphics("img/kr-joro.jpg")
+include_graphics("koehler-diaspora-circa-2017.jpg")
 ```
 
 ---
@@ -799,11 +802,19 @@ The repository for this workshop is [here](https://github.com/jrosen48/MTSU-work
 
 ---
 
-# Acknowlegment
+# Acknowlegments
 
-This presentation is based on one given with Dr. Emily Bovee: https://github.com/jrosen48/MSU-workshop-2019
+Thank you to [Joshua Rosenberg](https://github.com/jrosen48/) and [Emily Bovee](https://github.com/emilybovee) for developing the workshops this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
+
+Parts of the content for this workshop are also adapted from:
+
+- The [*Data Science in Education Using R* book](https://github.com/data-edu/data-science-in-education) by Emily A. Bovee, Ryan A. Estrellado, Jesse Mostipak, Joshua M. Rosenberg, and Isabella C. Velásquez to be published by Routledge in 2020 
+- An American Educational Research Association 2019 annual meeting [workshop on *Reproducible and transparent research with R*](https://github.com/ResearchTransparency/rr_aera19) by [Daniel Anderson](https://github.com/datalorax]) and [Joshua Rosenberg](https://github.com/jrosen48/)
+
+Finally, parts of the content for this workshop are inspired from content associated with the [Data Science Specialization for UO COE](https://github.com/uo-datasci-specialization) (led by [Daniel Anderson](https://github.com/datalorax]))
 
 ---
+
 # Contact
 
-- [Joshua Rosenberg](mailto:jmrosenberg@utk.edu)
+- [Bret Staudt Willet](mailto:staudtwi@msu.edu)
