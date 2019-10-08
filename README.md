@@ -66,7 +66,7 @@ The slides are here: https://bretsw.github.io/aect19-workshop/
 
 ## R Studio Cloud
 
-An R Studio Cloud workspace/environment for the `demo-doc.Rmd` document in this repository is availabile here: https://rstudio.cloud/project/486640
+An R Studio Cloud workspace/environment for the `demo-doc.Rmd` document in this repository is availabile here: https://rstudio.cloud/project/597547
 
 This may be especially helpful if you do not yet have R and R Studio installed on your computer. It does require you to create an account or to use a Google (or GitHub) account to sign-in.
 
