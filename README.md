@@ -6,7 +6,7 @@ This is a repository for:
 at AECT's Annual International Convention in Las Vegas, NV
 Wednesday, 10/23, 9:00am - 4:00pm
 - [Bret Staudt Willet](https://github.com/bretsw)
-- [Josh Rosenberg](https://github.com/jrosen48/)
+- [Joshua Rosenberg](https://github.com/jrosen48/)
 - [Spencer Greenhalgh](https://github.com/greenhas)
 
 ## Description
@@ -79,6 +79,6 @@ Thank you to [Joshua Rosenberg](https://github.com/jrosen48/) and [Emily Bovee](
 Parts of the content for this workshop are also adapted from:
 
 - The [*Data Science in Education Using R* book](https://github.com/data-edu/data-science-in-education) by Emily A. Bovee, Ryan A. Estrellado, Jesse Mostipak, Joshua M. Rosenberg, and Isabella C. Velásquez to be published by Routledge in 2020 
-- An American Educational Research Association 2019 annual meeting [workshop on *Reproducible and transparent research with R*](https://github.com/ResearchTransparency/rr_aera19) by [Daniel Anderson](https://github.com/datalorax]) and [Josh Rosenberg](https://github.com/jrosen48/)
+- An American Educational Research Association 2019 annual meeting [workshop on *Reproducible and transparent research with R*](https://github.com/ResearchTransparency/rr_aera19) by [Daniel Anderson](https://github.com/datalorax]) and [Joshua Rosenberg](https://github.com/jrosen48/)
 
 Finally, parts of the content for this workshop are inspired from content associated with the [Data Science Specialization for UO COE](https://github.com/uo-datasci-specialization) (led by [Daniel Anderson](https://github.com/datalorax]))
