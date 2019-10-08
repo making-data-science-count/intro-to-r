@@ -90,7 +90,7 @@ This may be especially helpful if you do not yet have R and R Studio installed o
 
 ## Thank you
 
-Thank you to [Josh Rosenberg](https://github.com/jrosen48/) and [Emily Bovee](https://github.com/emilybovee) for developing the workshop this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop
+Thank you to [Joshua Rosenberg](https://github.com/jrosen48/) and [Emily Bovee](https://github.com/emilybovee) for developing the workshops this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
 
 ## Acknowledgments
 
