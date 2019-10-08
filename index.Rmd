@@ -156,6 +156,7 @@ vignette("dplyr", package = "dplyr")
 ```
 
 These are also available through CRAN (i.e., https://cran.r-project.org/web/packages/dplyr/index.html)
+
 ---
 
 # Using a specific function
@@ -209,6 +210,7 @@ library(tidyverse)
 class: inverse, center, middle
 
 # Computer science foundations
+
 ---
 
 # Data structures
@@ -278,6 +280,7 @@ d1 %>%
 ```
 
 ---
+
 # Objects, functions, directories, and data structures
 
 Here's a short URL: `https://goo.gl/bUeMhV`
@@ -337,8 +340,10 @@ download.file(
 ```
 
 ---
+
 class: inverse, center, middle
 # Processing Data
+
 ---
 
 # The pipe: %>% 
@@ -635,7 +640,9 @@ ggplot(student_mot_vars,
   geom_point() +
   geom_smooth(method = "lm")
 ```
+
 ---
+
 # Cleaning up
 
 ```{r, warning = FALSE, out.width = "350px", fig.align = "center"}
@@ -647,6 +654,7 @@ ggplot(student_mot_vars,
   xlab("Student Efficacy") +
   ylab("Student Broad Interest")
 ```
+
 ---
 
 class: inverse, center, middle
@@ -711,14 +719,15 @@ library(lme4)
 m2_mlm <- lmer(student_epistemic_beliefs ~ student_broad_interest + student_joy + student_broad_interest:student_joy + (1|teacher_id), data = student_mot_vars)
 m2_mlm
 ```
+
 ---
 
 class: inverse, center, middle
 # Demo doc (part 3)
 
 *The doc is [here](https://github.com/jrosen48/MTSU-workshop/blob/master/demo-doc.Rmd) in the repository*
----
 
+---
 
 class: inverse, center, middle
 # Learning and doing more with R
@@ -792,17 +801,19 @@ With one exception, can install via `install.packages(<name-of-package)`, i.e., 
 - [Gabriela de Quieroz](https://twitter.com/gdequeiroz)
 - [Emily Bovee](https://twitter.com/ebovee09)
 - [Joshua Rosenberg](https://twitter.com/jrosenberg6432)
+- [Spencer Greenhalgh](https://twitter.com/spgreenhalgh)
+- [Bret Staudt Willet](https://twitter.com/bretsw)
 
 ---
 
 class: inverse, center, middle
 # Questions?
 
-The repository for this workshop is [here](https://github.com/jrosen48/MTSU-workshop).
+The repository for this workshop is [here](https://github.com/bretsw/aect19-workshop).
 
 ---
 
-# Acknowlegments
+# Acknowledgments
 
 Thank you to [Joshua Rosenberg](https://github.com/jrosen48/) and [Emily Bovee](https://github.com/emilybovee) for developing the workshops this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
 
