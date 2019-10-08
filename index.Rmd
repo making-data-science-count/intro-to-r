@@ -1,8 +1,8 @@
 ---
-title: "An Introduction to Data Science in Education in Education Using R"
-subtitle: ""
-author: "Joshua Rosenberg"
-date: "2019-09-05"
+title: "Online Data and Open Source Tools: Analyzing Educational Internet Data Using R"
+subtitle: "#aect19inspired"
+author: "Bret Staudt Willet, Spencer Greenhalgh, & Joshua Rosenberg"
+date: "2019-10-23"
 output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, custom.css]
