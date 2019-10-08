@@ -5,9 +5,9 @@ This is a repository for:
 *Online Data and Open Source Tools: Analyzing Educational Internet Data Using R*
 at AECT's Annual International Convention in Las Vegas, NV
 Wednesday, 10/23, 9:00am - 4:00pm
-[Bret Staudt Willet](https://github.com/bretsw)
-[Josh Rosenberg](https://github.com/jrosen48/)
-[Spencer Greenhalgh](https://github.com/greenhas)
+- [Bret Staudt Willet](https://github.com/bretsw)
+- [Josh Rosenberg](https://github.com/jrosen48/)
+- [Spencer Greenhalgh](https://github.com/greenhas)
 
 ## Description
 
@@ -40,22 +40,6 @@ The workshop objectives are as follows:
 - Become more confident in one’s ability to access and analyze complex, quantitative sources of data.
 - Understand how to learn more with respect to using R for research purposes.
 
-## Workshop Structure
-
-This six-hour workshop is structured as follows:
-- Introductions and backgrounds (15 minutes)
-- Overview of R (15 minutes)
-- Installation of R, R Studio, and an R package (30 minutes)
-- Walkthrough of an analysis of educational Internet data (2 hours)
-- LUNCH BREAK
-- Accessing and processing the data and descriptive statistics (30 minutes)
-- Linear regression (30 minutes)
-- Social network analysis (30 minutes)
-- Linguistic or natural language processing analysis (30 minutes)
-- Begin one’s own analysis of educational Internet data using data sources that are provided or identified by the workshop organizers or by participants (1.5 hours)
-- Share results of initial analysis in on an open, freely-available platform, such as R Pubs, GitHub Pages, or one’s personal homepage (30 minutes)
-- Understand how to find help in terms of resources, help forums, and the wider community of educational and AECT researchers (30 minutes) 
-
 ---
 
 ## Installations
@@ -74,7 +58,7 @@ To download R Studio:
 
 ## Slides
 
-The slides are here: https://jrosen48.github.io/mtsu-workshop/
+The slides are here: https://bretsw.github.io/aect19-workshop/
 
 ## Interactive R Markdown File
 
@@ -88,11 +72,9 @@ This may be especially helpful if you do not yet have R and R Studio installed o
 
 ---
 
-## Thank you
+## Acknowledgments
 
 Thank you to [Joshua Rosenberg](https://github.com/jrosen48/) and [Emily Bovee](https://github.com/emilybovee) for developing the workshops this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
-
-## Acknowledgments
 
 Parts of the content for this workshop are also adapted from:
 
