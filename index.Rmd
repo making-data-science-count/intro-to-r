@@ -23,6 +23,14 @@ library(tidyverse)
 library(xaringan)
 ```
 
+class: inverse, center, middle
+
+# Slides
+
+You can access our slide deck here: https://bretsw.github.io/aect19-workshop/
+
+---
+
 # Who We Are
 
 * **Bret Staudt Willet**
@@ -35,9 +43,8 @@ library(xaringan)
   * Assistant Professor, STEM Education, University of Tennessee, Knoxville
   * *Primary area of interest:* data science in education + data science education
 
-
 ```{r, out.width = "360px", echo = FALSE, fig.align = "center"}
-include_graphics("koehler-diaspora-circa-2017.jpg")
+include_graphics("img/koehler-diaspora-circa-2017.jpg")
 ```
 
 ---
@@ -48,8 +55,10 @@ class: inverse, center, middle
 
 ---
 
-# Agenda
+# Morning Agenda
 
+1. Introductions
+1. Pre-survey
 1. Why learn R?
 1. Getting started with R Studio
 1. Computer science foundations
@@ -57,8 +66,38 @@ class: inverse, center, middle
 1. Loading data
 1. Visualizing data
 1. Modeling data 
+1. Questions
+
+---
+
+# Afternoon Agenda
+
+1. Considerations for Using Social Media Data in Learning Design and Technology Research
+1. Conducting ethical research
+1. Framing the research
+1. Organizing the research process
+1. Collecting data
+1. Analyzing data
+1. Writing, sharing, and publicizing research
 1. Learning and doing more with R
 1. Questions
+1. Post-survey
+
+---
+
+class: inverse, center, top
+
+# Survey
+
+```{r, out.width = "720px", echo = FALSE, fig.align = "center"}
+include_graphics("img/survey.jpg")
+```
+
+---
+
+class: inverse, center, middle
+
+# Why learn R?
 
 ---
 
@@ -183,7 +222,7 @@ filter(dat, letter == "A")
 
 By default, R Studio saves all of the objects in your environment. In general, this is not ideal, because it means that you may have taken steps interactively that are not documented your code.
 
-```{r, out.width = "425px", echo= FALSE, fig.align = "center"}
+```{r, out.width = "425px", echo=FALSE, fig.align = "center"}
 include_graphics("img/save-workspace-reminder.jpg")
 ```
 
@@ -398,7 +437,7 @@ student_mot_vars <- student_responses %>%
          student_joy = JOYSCIE, 
          student_broad_interest = INTBRSCI,
          student_epistemic_beliefs = EPIST,
-         student_instrumental_motivation = INSTSCIE,
+         student_instrumental_motivation = INSTSCIE
   )
 
 student_mot_vars %>% 
@@ -735,6 +774,52 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
+# Considerations for Using Social Media Data in Learning Design and Technology Research
+
+---
+
+class: inverse, center, middle
+
+# Conducting ethical research
+
+---
+
+class: inverse, center, middle
+
+# Framing the research
+
+---
+
+class: inverse, center, middle
+
+# Organizing the research process
+
+---
+
+class: inverse, center, middle
+
+# Collecting data
+
+---
+
+APIs
+
+---
+
+class: inverse, center, middle
+
+# Analyzing data
+
+---
+
+class: inverse, center, middle
+
+# Writing, sharing, and publicizing research
+
+---
+
+class: inverse, center, middle
+
 # Learning and doing more with R
 
 ---
@@ -815,7 +900,7 @@ class: inverse, center, middle
 
 # Questions?
 
-The repository for this workshop is [here](https://github.com/bretsw/aect19-workshop).
+The GitHub repository for this workshop is [here](https://github.com/bretsw/aect19-workshop).
 
 ---
 
@@ -832,6 +917,18 @@ Finally, parts of the content for this workshop are inspired from content associ
 
 ---
 
+class: inverse, center, middle
+
 # Contact
 
-- [Bret Staudt Willet](mailto:staudtwi@msu.edu)
+Email [Bret Staudt Willet](mailto:staudtwi@msu.edu)
+
+---
+
+class: inverse, center, top
+
+# Survey
+
+```{r, out.width = "720px", echo = FALSE, fig.align = "center"}
+include_graphics("img/survey.jpg")
+```

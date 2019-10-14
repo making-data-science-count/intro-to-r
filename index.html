@@ -24,6 +24,14 @@ class: center, middle, inverse, title-slide
 
 
 
+class: inverse, center, middle
+
+# Slides
+
+You can access our slide deck here: https://bretsw.github.io/aect19-workshop/
+
+---
+
 # Who We Are
 
 * **Bret Staudt Willet**
@@ -36,8 +44,7 @@ class: center, middle, inverse, title-slide
   * Assistant Professor, STEM Education, University of Tennessee, Knoxville
   * *Primary area of interest:* data science in education + data science education
 
-
-&lt;img src="koehler-diaspora-circa-2017.jpg" width="360px" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/koehler-diaspora-circa-2017.jpg" width="360px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -47,8 +54,9 @@ class: inverse, center, middle
 
 ---
 
-# Agenda
+# Morning Agenda
 
+1. Pre-survey
 1. Why learn R?
 1. Getting started with R Studio
 1. Computer science foundations
@@ -56,8 +64,36 @@ class: inverse, center, middle
 1. Loading data
 1. Visualizing data
 1. Modeling data 
+1. Questions
+
+---
+
+# Afternoon Agenda
+
+1. Considerations for Using Social Media Data in Learning Design and Technology Research
+1. Conducting ethical research
+1. Framing the research
+1. Organizing the research process
+1. Collecting data
+1. Analyzing data
+1. Writing, sharing, and publicizing research
 1. Learning and doing more with R
 1. Questions
+1. Post-survey
+
+---
+
+class: inverse, center, top
+
+# Survey
+
+&lt;img src="img/survey.jpg" width="720px" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: inverse, center, middle
+
+# Why learn R?
 
 ---
 
@@ -320,16 +356,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##     var1 var2   
 ##    &lt;dbl&gt; &lt;chr&gt;  
-##  1 0.593 greater
-##  2 0.175 lesser 
-##  3 0.164 lesser 
-##  4 0.136 lesser 
-##  5 0.590 greater
-##  6 0.545 greater
-##  7 0.450 lesser 
-##  8 0.397 lesser 
-##  9 0.103 lesser 
-## 10 0.597 greater
+##  1 0.401 lesser 
+##  2 0.250 lesser 
+##  3 0.131 lesser 
+##  4 0.609 greater
+##  5 0.344 lesser 
+##  6 0.162 lesser 
+##  7 0.561 greater
+##  8 0.853 greater
+##  9 0.906 greater
+## 10 0.614 greater
 ```
 
 ---
@@ -353,16 +389,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##     var1 var2       
 ##    &lt;dbl&gt; &lt;chr&gt;      
-##  1 0.593 greater    
-##  2 0.175 very little
-##  3 0.164 very little
-##  4 0.136 very little
-##  5 0.590 greater    
-##  6 0.545 greater    
-##  7 0.450 lesser     
-##  8 0.397 lesser     
-##  9 0.103 very little
-## 10 0.597 greater
+##  1 0.401 lesser     
+##  2 0.250 very little
+##  3 0.131 very little
+##  4 0.609 greater    
+##  5 0.344 lesser     
+##  6 0.162 very little
+##  7 0.561 greater    
+##  8 0.853 a lot      
+##  9 0.906 a lot      
+## 10 0.614 greater
 ```
 
 ---
@@ -794,7 +830,7 @@ student_mot_vars &lt;- # save object student_mot_vars by...
 
 Notice the three parts of all `ggplot2` graphs: a) the data (`student_mot_vars`), b) an `aes()`thetic mapping, and c) a `geom`:
 
-&lt;img src="index_files/figure-html/unnamed-chunk-43-1.png" width="450px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-44-1.png" width="450px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -808,7 +844,7 @@ ggplot(student_mot_vars,
   geom_smooth(method = "lm")
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-44-1.png" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-45-1.png" width="350px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -825,7 +861,7 @@ ggplot(student_mot_vars,
   ylab("Student Broad Interest")
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-45-1.png" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-46-1.png" width="350px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -981,6 +1017,48 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
+# Considerations for Using Social Media Data in Learning Design and Technology Research
+
+---
+
+class: inverse, center, middle
+
+# Conducting ethical research
+
+---
+
+class: inverse, center, middle
+
+# Framing the research
+
+---
+
+class: inverse, center, middle
+
+# Organizing the research process
+
+---
+
+class: inverse, center, middle
+
+# Collecting data
+
+---
+
+class: inverse, center, middle
+
+# Analyzing data
+
+---
+
+class: inverse, center, middle
+
+# Writing, sharing, and publicizing research
+
+---
+
+class: inverse, center, middle
+
 # Learning and doing more with R
 
 ---
@@ -1078,9 +1156,19 @@ Finally, parts of the content for this workshop are inspired from content associ
 
 ---
 
+class: inverse, center, middle
+
 # Contact
 
-- [Bret Staudt Willet](mailto:staudtwi@msu.edu)
+Email [Bret Staudt Willet](mailto:staudtwi@msu.edu)
+
+---
+
+class: inverse, center, top
+
+# Survey
+
+&lt;img src="img/survey.jpg" width="720px" style="display: block; margin: auto;" /&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
