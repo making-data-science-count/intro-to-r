@@ -1235,9 +1235,7 @@ With one exception, can install via `install.packages(<name-of-package)`, i.e., 
 - blogdown create a website/blog
 - xaringan: create presentations
 - MplusAutomation: Run Mplus via R
-
 ---
-
 # People (and a few hashtags) to follow (on Twitter)
 
 - [Jesse Mostipak](https://twitter.com/kierisi)
@@ -1262,7 +1260,7 @@ With one exception, can install via `install.packages(<name-of-package)`, i.e., 
 
 # Acknowledgments
 
-Thank you to [Joshua Rosenberg](https://github.com/jrosen48/) and [Emily Bovee](https://github.com/emilybovee) for developing the workshops this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
+Thank you to [Emily Bovee](https://github.com/emilybovee) for co-developing the workshop this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
 
 Parts of the content for this workshop are also adapted from:
 
