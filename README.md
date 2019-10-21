@@ -5,9 +5,9 @@ This is a repository for:
 *Online Data and Open Source Tools: Analyzing Educational Internet Data Using R*  
 at AECT's Annual International Convention in Las Vegas, NV  
 Wednesday, 10/23, 9:00am - 3:50pm
-- [Bret Staudt Willet](https://github.com/bretsw)
-- [Joshua Rosenberg](https://github.com/jrosen48/)
+- [K. Bret Staudt Willet](https://github.com/bretsw)
 - [Spencer Greenhalgh](https://github.com/greenhas)
+- [Joshua Rosenberg](https://github.com/jrosen48/)
 
 ## Description
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Online Data and Open Source Tools: Analyzing Educational Internet Data Using R</title>
+    <title>Online Data and Open Source Tools</title>
     <meta charset="utf-8" />
     <meta name="author" content="Bret Staudt Willet, Spencer Greenhalgh, &amp; Joshua Rosenberg" />
     <meta name="date" content="2019-10-23" />
@@ -14,10 +14,10 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Online Data and Open Source Tools: Analyzing Educational Internet Data Using R
-## AECT 2019
+# Online Data and Open Source Tools
+## Analyzing Educational Internet Data Using R
 ### Bret Staudt Willet, Spencer Greenhalgh, &amp; Joshua Rosenberg
-### 2019-10-23
+### October 23, 2019
 
 ---
 
@@ -26,9 +26,13 @@ class: center, middle, inverse, title-slide
 
 class: inverse, center, middle
 
-# Slides
+**Access our slide deck here:**  
+https://bretsw.github.io/aect19-workshop/
 
-You can access our slide deck here: https://bretsw.github.io/aect19-workshop/
+**Follow us on Twitter:**  
+[@bretsw](https://twitter.com/bretsw)  
+[@spgreenhalgh](https://twitter.com/spgreenhalgh)  
+[@jrosenberg6432](https://twitter.com/jrosenberg6432)
 
 ---
 
@@ -56,6 +60,7 @@ class: inverse, center, middle
 
 # Morning Agenda
 
+1. Introductions
 1. Pre-survey
 1. Why learn R?
 1. Getting started with R Studio
@@ -65,27 +70,29 @@ class: inverse, center, middle
 1. Visualizing data
 1. Modeling data 
 1. Questions
+1. Lunch break
 
 ---
 
 # Afternoon Agenda
 
+1. Self-guided exploration (Option A: Text analysis; Option B: Social network analysis)
 1. Considerations for Using Social Media Data in Learning Design and Technology Research
 1. Conducting ethical research
 1. Framing the research
 1. Organizing the research process
 1. Collecting data
 1. Analyzing data
-1. Writing, sharing, and publicizing research
+1. Disseminating research
 1. Learning and doing more with R
 1. Questions
-1. Post-survey
+1. Post-survey + (optional) upload your .Rmd file for the day
 
 ---
 
 class: inverse, center, top
 
-# Survey
+# Pre-survey
 
 &lt;img src="img/survey.jpg" width="720px" style="display: block; margin: auto;" /&gt;
 
@@ -356,16 +363,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##     var1 var2   
 ##    &lt;dbl&gt; &lt;chr&gt;  
-##  1 0.401 lesser 
-##  2 0.250 lesser 
-##  3 0.131 lesser 
-##  4 0.609 greater
-##  5 0.344 lesser 
-##  6 0.162 lesser 
-##  7 0.561 greater
-##  8 0.853 greater
-##  9 0.906 greater
-## 10 0.614 greater
+##  1 0.333 lesser 
+##  2 0.498 lesser 
+##  3 0.118 lesser 
+##  4 0.753 greater
+##  5 0.129 lesser 
+##  6 0.336 lesser 
+##  7 0.826 greater
+##  8 0.338 lesser 
+##  9 0.370 lesser 
+## 10 0.452 lesser
 ```
 
 ---
@@ -389,16 +396,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##     var1 var2       
 ##    &lt;dbl&gt; &lt;chr&gt;      
-##  1 0.401 lesser     
-##  2 0.250 very little
-##  3 0.131 very little
-##  4 0.609 greater    
-##  5 0.344 lesser     
-##  6 0.162 very little
-##  7 0.561 greater    
-##  8 0.853 a lot      
-##  9 0.906 a lot      
-## 10 0.614 greater
+##  1 0.333 lesser     
+##  2 0.498 lesser     
+##  3 0.118 very little
+##  4 0.753 a lot      
+##  5 0.129 very little
+##  6 0.336 lesser     
+##  7 0.826 a lot      
+##  8 0.338 lesser     
+##  9 0.370 lesser     
+## 10 0.452 lesser
 ```
 
 ---
@@ -529,7 +536,7 @@ student_mot_vars &lt;- student_responses %&gt;%
          student_joy = JOYSCIE, 
          student_broad_interest = INTBRSCI,
          student_epistemic_beliefs = EPIST,
-         student_instrumental_motivation = INSTSCIE,
+         student_instrumental_motivation = INSTSCIE
   )
 
 student_mot_vars %&gt;% 
@@ -1017,7 +1024,109 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# Considerations for Using Social Media Data in Learning Design and Technology Research
+# Afternoon 
+
+---
+
+# Afternoon Agenda
+
+1. Self-guided exploration (Option A: Text analysis; Option B: Social network analysis)
+1. Considerations for Using Social Media Data in Learning Design and Technology Research
+1. Conducting ethical research
+1. Framing the research
+1. Organizing the research process
+1. Collecting data
+1. Analyzing data
+1. Disseminating research
+1. Learning and doing more with R
+1. Questions
+1. Post-survey + (optional) upload your .Rmd file for the day
+
+---
+
+class: inverse, center, middle
+
+# Self-guided exploration 
+
+---
+
+# Introduction to text analysis
+
+--
+
+Give example or two (word count, search, sentiment)
+
+---
+
+# Introduction to social network analysis
+
+--
+
+&lt;img src="img/csed-graph-forced-atlas8.png" width="480px" style="display: block; margin: auto;" /&gt;
+
+--
+
+*A network is a set of objects, and network analysis is interested in the relationships between them.*
+
+--
+
+* So, what are the objects? How are they related?
+
+---
+
+# Self-guided exploration 
+
+--
+
+### Option A: Text analysis
+
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+
+--
+
+### Option B: Social network analysis
+
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+
+---
+
+class: inverse, center, middle
+
+# Considerations for Using Social Media Data in Learning Design &amp; Technology Research
+
+&lt;img src="img/book.jpg" width="600px" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Chapter overview
+
+--
+
+Our purpose in this chapter is to suggest considerations that LDT professionals should make as they use social media data in their research. 
+
+---
+
+# Important notes
+
+--
+
+* Not to dismiss traditional research methods
+
+__
+
+* There is considerable room for debate and disagreement around the proper way to conduct social media research
+
+--
+
+* Our focus is not providing answers but raising questions
+
+--
+
+* The issues and processes we raise are not linear; this is not a simple recipe to follow
+
+--
+
+* We avoid the traditional distinction between *quantitative* and *qualitative* research, and instead suggest various other distinctions as we go
 
 ---
 
@@ -1029,7 +1138,89 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
+# What's your project?
+
+&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Conducting ethical research
+
+* Often, IRBs do not flag social media work as human subjects research; however, we would suggest that it is a human phenomenon
+
+--
+
+* Not a checklist, but a thorough consideration of research context and ethical principles is needed
+
+--
+
+* Public vs. private
+
+--
+
+* Harms and benefits
+
+--
+
+* Vulnerability
+
+--
+
+* Anonymity
+
+--
+
+* Consent
+
+--
+
+* Legal considerations
+
+---
+
+class: inverse, center, middle
+
+# What ethical considerations should you examine in your project?
+
+&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: inverse, center, middle
+
 # Framing the research
+
+---
+
+# Framing the research
+
+--
+
+* Paradigms and assumptions
+
+--
+
+* Research design, methods, and modes of inquiry
+
+--
+
+* Conceptual frameworks
+
+--
+
+  * Community, network, or space?
+
+--
+
+* Phenomena and units of analysis
+
+---
+
+class: inverse, center, middle
+
+# How will you frame your project?
+
+&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1039,9 +1230,72 @@ class: inverse, center, middle
 
 ---
 
+# Organizing the research process
+
+--
+
+* Software
+
+--
+
+* Storing data
+
+--
+
+* Workflows
+
+--
+
+* Documentation
+
+---
+
+class: inverse, center, middle
+
+# What do you need to do to organize your project?
+
+&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
+
+---
+
 class: inverse, center, middle
 
 # Collecting data
+
+---
+
+# Collecting data
+
+--
+
+* Obtrusive or unobtrusive
+
+--
+
+  * Unobtrusive: *digital traces*
+
+--
+
+* Process
+
+--
+
+  * Application programming interfaces (APIs)
+    * TAGS + rtweet
+  * Web scraping
+  * Accessing archives
+
+--
+
+* Quantity: big vs. small
+
+---
+
+class: inverse, center, middle
+
+# How will you collect data for your project?
+
+&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1051,9 +1305,103 @@ class: inverse, center, middle
 
 ---
 
+# Analyzing data
+
+--
+
+* Spam
+
+--
+
+* Machine vs. human analysis
+
+--
+
+* Networks
+
+---
+
 class: inverse, center, middle
 
-# Writing, sharing, and publicizing research
+# How will you analyze data for your project?
+
+&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: inverse, center, middle
+
+# Disseminating research
+
+---
+
+# Disseminating research
+
+--
+
+* Sharing data
+
+--
+
+* Sharing code
+
+--
+
+  * TAGS + rtweet = rTAGS?
+
+--
+
+  * Github (http://github.com)
+  * Open Science Framework (http://osf.io)
+
+--
+
+* Publishing and publicizing research
+
+
+---
+
+class: inverse, center, middle
+
+# How will you disseminate your project?
+
+&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: inverse, center, middle
+
+# Conclusion
+
+---
+
+# Conclusion
+
+--
+
+* The ready availability of social media data provides many opportunities...
+
+--
+
+* ...but also considerable challenges for LDT researchers.
+
+--
+
+* So, get familiar with the broad considerations,
+
+--
+
+* and don't skip asking the important questions.
+
+--
+
+* Start and end with research ethics, and revisit throughout.
+
+---
+
+class: inverse, center, middle
+
+# Questions?
 
 ---
 
@@ -1135,14 +1483,6 @@ With one exception, can install via `install.packages(&lt;name-of-package)`, i.e
 
 ---
 
-class: inverse, center, middle
-
-# Questions?
-
-The repository for this workshop is [here](https://github.com/bretsw/aect19-workshop).
-
----
-
 # Acknowledgments
 
 Thank you to [Joshua Rosenberg](https://github.com/jrosen48/) and [Emily Bovee](https://github.com/emilybovee) for developing the workshops this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
@@ -1158,15 +1498,22 @@ Finally, parts of the content for this workshop are inspired from content associ
 
 class: inverse, center, middle
 
-# Contact
+# Questions?
 
-Email [Bret Staudt Willet](mailto:staudtwi@msu.edu)
+Bret Staudt Willet: [staudtwi@msu.edu](mailto:staudtwi@msu.edu)  
+Spencer Greenhalgh: [staudtwi@msu.edu](mailto:staudtwi@msu.edu)  
+Joshua Rosenberg: [staudtwi@msu.edu](mailto:staudtwi@msu.edu)  
+
+The GitHub repository for this workshop is  
+https://github.com/bretsw/aect19-workshop
 
 ---
 
 class: inverse, center, top
 
-# Survey
+# Post-survey
+
+(optional: upload your .Rmd file of work for the day)
 
 &lt;img src="img/survey.jpg" width="720px" style="display: block; margin: auto;" /&gt;
     </textarea>
