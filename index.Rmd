@@ -1276,10 +1276,10 @@ class: inverse, center, middle
 # Questions?
 
 Bret Staudt Willet: [staudtwi@msu.edu](mailto:staudtwi@msu.edu)  
-Spencer Greenhalgh: [staudtwi@msu.edu](mailto:staudtwi@msu.edu)  
-Joshua Rosenberg: [staudtwi@msu.edu](mailto:staudtwi@msu.edu)  
+Spencer Greenhalgh: [spencer.greenhalgh@uky.edu](mailto:spencer.greenhalgh@uky.edu)  
+Joshua Rosenberg: [jmrosenberg@utk.edu](mailto:jmrosenberg@utk.edu)  
 
-The GitHub repository for this workshop is  
+The GitHub repository for this workshop is:
 https://github.com/bretsw/aect19-workshop
 
 ---
