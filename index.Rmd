@@ -98,6 +98,8 @@ class: inverse, center, top
 
 # Pre-survey
 
+https://utk.co1.qualtrics.com/jfe/form/SV_d5Ldug6Y3KpEy45
+
 ```{r, out.width = "720px", echo = FALSE, fig.align = "center"}
 include_graphics("img/survey.jpg")
 ```
@@ -1287,6 +1289,8 @@ https://github.com/bretsw/aect19-workshop
 class: inverse, center, top
 
 # Post-survey
+
+https://utk.co1.qualtrics.com/jfe/form/SV_eqzRHdH8D0uo8Zf
 
 (optional: upload your .Rmd file of work for the day)
 
