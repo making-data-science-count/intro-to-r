@@ -815,7 +815,21 @@ class: inverse, center, middle
 
 --
 
-Give example or two (word count, search, sentiment)
+There are all kinds of things you might wonder about the text of a document. 
+
+For instance:
+
+--
+
+* How many words are in a document?
+
+--
+
+* Which words are most used most often in a text?
+
+--
+
+* How many times is a specific word used?
 
 ---
 
