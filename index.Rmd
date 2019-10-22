@@ -827,13 +827,17 @@ Give example or two (word count, search, sentiment)
 include_graphics("img/csed-graph-forced-atlas8.png")
 ```
 
---
-
 *A network is a set of objects, and network analysis is interested in the relationships between them.*
 
---
+---
 
-* So, what are the objects? How are they related?
+# Introduction to social network analysis
+
+```{r, out.width = "480px", echo = FALSE, fig.align = "center"}
+include_graphics("img/csed-graph-forced-atlas8.png")
+```
+
+*So, what are the objects? How are they related?*
 
 ---
 
@@ -841,15 +845,15 @@ include_graphics("img/csed-graph-forced-atlas8.png")
 
 --
 
-### Option A: Text analysis
+### Option A: Text analysis (Difficulty: Moderate)
 
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/explore-on-your-own-1.Rmd) in the repository*
 
 --
 
-### Option B: Social network analysis
+### Option B: Social network analysis (Difficulty: Hard)
 
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/explore-on-your-own-2.Rmd) in the repository*
 
 ---
 
@@ -865,8 +869,6 @@ include_graphics("img/book.jpg")
 
 # Chapter overview
 
---
-
 Our purpose in this chapter is to suggest considerations that LDT professionals should make as they use social media data in their research. 
 
 ---
@@ -875,9 +877,9 @@ Our purpose in this chapter is to suggest considerations that LDT professionals 
 
 --
 
-* Not to dismiss traditional research methods
+* Our puprose is *not* to dismiss traditional research methods
 
-__
+--
 
 * There is considerable room for debate and disagreement around the proper way to conduct social media research
 
@@ -1237,9 +1239,10 @@ With one exception, can install via `install.packages(<name-of-package)`, i.e., 
 - blogdown create a website/blog
 - xaringan: create presentations
 - MplusAutomation: Run Mplus via R
----
-# People (and a few hashtags) to follow (on Twitter)
 
+---
+
+# People (and a few hashtags) to follow (on Twitter)
 - [Jesse Mostipak](https://twitter.com/kierisi)
 - [Alison Hill](https://twitter.com/apreshill)
 - [Hadley Wickham](https://twitter.com/hadleywickham)

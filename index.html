@@ -94,6 +94,8 @@ class: inverse, center, top
 
 # Pre-survey
 
+http://bit.ly/r-at-aect-pre
+
 &lt;img src="img/survey.jpg" width="720px" style="display: block; margin: auto;" /&gt;
 
 ---
@@ -361,18 +363,18 @@ d1 %&gt;%
 
 ```
 ## # A tibble: 10 x 2
-##     var1 var2   
-##    &lt;dbl&gt; &lt;chr&gt;  
-##  1 0.333 lesser 
-##  2 0.498 lesser 
-##  3 0.118 lesser 
-##  4 0.753 greater
-##  5 0.129 lesser 
-##  6 0.336 lesser 
-##  7 0.826 greater
-##  8 0.338 lesser 
-##  9 0.370 lesser 
-## 10 0.452 lesser
+##        var1 var2   
+##       &lt;dbl&gt; &lt;chr&gt;  
+##  1 0.000291 lesser 
+##  2 0.715    greater
+##  3 0.231    lesser 
+##  4 0.641    greater
+##  5 0.275    lesser 
+##  6 0.629    greater
+##  7 0.994    greater
+##  8 0.634    greater
+##  9 0.772    greater
+## 10 0.901    greater
 ```
 
 ---
@@ -394,18 +396,18 @@ d1 %&gt;%
 
 ```
 ## # A tibble: 10 x 2
-##     var1 var2       
-##    &lt;dbl&gt; &lt;chr&gt;      
-##  1 0.333 lesser     
-##  2 0.498 lesser     
-##  3 0.118 very little
-##  4 0.753 a lot      
-##  5 0.129 very little
-##  6 0.336 lesser     
-##  7 0.826 a lot      
-##  8 0.338 lesser     
-##  9 0.370 lesser     
-## 10 0.452 lesser
+##        var1 var2       
+##       &lt;dbl&gt; &lt;chr&gt;      
+##  1 0.000291 very little
+##  2 0.715    greater    
+##  3 0.231    very little
+##  4 0.641    greater    
+##  5 0.275    lesser     
+##  6 0.629    greater    
+##  7 0.994    a lot      
+##  8 0.634    greater    
+##  9 0.772    a lot      
+## 10 0.901    a lot
 ```
 
 ---
@@ -1064,13 +1066,15 @@ Give example or two (word count, search, sentiment)
 
 &lt;img src="img/csed-graph-forced-atlas8.png" width="480px" style="display: block; margin: auto;" /&gt;
 
---
-
 *A network is a set of objects, and network analysis is interested in the relationships between them.*
 
---
+---
 
-* So, what are the objects? How are they related?
+# Introduction to social network analysis
+
+&lt;img src="img/csed-graph-forced-atlas8.png" width="480px" style="display: block; margin: auto;" /&gt;
+
+*So, what are the objects? How are they related?*
 
 ---
 
@@ -1078,15 +1082,15 @@ Give example or two (word count, search, sentiment)
 
 --
 
-### Option A: Text analysis
+### Option A: Text analysis (Difficulty: Moderate)
 
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/explore-on-your-own-1.Rmd) in the repository*
 
 --
 
-### Option B: Social network analysis
+### Option B: Social network analysis (Difficulty: Hard)
 
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/explore-on-your-own-2.Rmd) in the repository*
 
 ---
 
@@ -1100,8 +1104,6 @@ class: inverse, center, middle
 
 # Chapter overview
 
---
-
 Our purpose in this chapter is to suggest considerations that LDT professionals should make as they use social media data in their research. 
 
 ---
@@ -1110,9 +1112,9 @@ Our purpose in this chapter is to suggest considerations that LDT professionals 
 
 --
 
-* Not to dismiss traditional research methods
+* Our puprose is *not* to dismiss traditional research methods
 
-__
+--
 
 * There is considerable room for debate and disagreement around the proper way to conduct social media research
 
@@ -1462,7 +1464,6 @@ With one exception, can install via `install.packages(&lt;name-of-package)`, i.e
 ---
 
 # People (and a few hashtags) to follow (on Twitter)
-
 - [Jesse Mostipak](https://twitter.com/kierisi)
 - [Alison Hill](https://twitter.com/apreshill)
 - [Hadley Wickham](https://twitter.com/hadleywickham)
@@ -1485,7 +1486,7 @@ With one exception, can install via `install.packages(&lt;name-of-package)`, i.e
 
 # Acknowledgments
 
-Thank you to [Joshua Rosenberg](https://github.com/jrosen48/) and [Emily Bovee](https://github.com/emilybovee) for developing the workshops this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
+Thank you to [Emily Bovee](https://github.com/emilybovee) for co-developing the workshop this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
 
 Parts of the content for this workshop are also adapted from:
 
@@ -1501,10 +1502,10 @@ class: inverse, center, middle
 # Questions?
 
 Bret Staudt Willet: [staudtwi@msu.edu](mailto:staudtwi@msu.edu)  
-Spencer Greenhalgh: [staudtwi@msu.edu](mailto:staudtwi@msu.edu)  
-Joshua Rosenberg: [staudtwi@msu.edu](mailto:staudtwi@msu.edu)  
+Spencer Greenhalgh: [spencer.greenhalgh@uky.edu](mailto:spencer.greenhalgh@uky.edu)  
+Joshua Rosenberg: [jmrosenberg@utk.edu](mailto:jmrosenberg@utk.edu)  
 
-The GitHub repository for this workshop is  
+The GitHub repository for this workshop is:
 https://github.com/bretsw/aect19-workshop
 
 ---
@@ -1512,6 +1513,8 @@ https://github.com/bretsw/aect19-workshop
 class: inverse, center, top
 
 # Post-survey
+
+http://bit.ly/r-at-eact-post
 
 (optional: upload your .Rmd file of work for the day)
 
