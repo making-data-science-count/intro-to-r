@@ -1,5 +1,5 @@
 ---
-title: "Explore On Your Own #2: Social Network Analysis (Difficulty: Hard)"
+title: "Explore On Your Own #1: Text Analysis (Difficulty: Moderate)"
 output: html_document
 ---
 
@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Explore On Your Own #1: Social Network Analysis
+# Explore On Your Own #2: Text Analysis
 
 ## Accessing data
 
@@ -65,149 +65,43 @@ If you haven't already, be sure to type `d` into the console (or to run the chun
 
 # Preparing the data for the analysis
 
-Network data, in general, and potential network data from Twitter, in particular, require some processing before they can be used in subsequent analyses.
+Text data can be stored a number of ways. We will focus on a common data structure, a document-term matrix. 
 
-## Extracting retweets
+The idea that is essential for understanding a document-term matrix is that it is simply a data frame with every term across every document comprising the columns, and every document being represented with each row. 
 
-Next, let's get the retweets. We'll identify retweets on the basis of the tweet beginning with the pattern "RT @". Be sure to replace `my_data_frame` with the name of your data frame. 
-
-there is a lot going on in the code below; let's break it down line-by-line, starting with the `mutate()`:
-
-- `first_four_chars = str_sub(text, start = 1, end = 4),`: this line of code identifies the first four characters of the tweet
-- `is_retweet = str_detect(first_four_chars, "RT @"),`: this line of code then determines whether the first four characters - identified through the last line of code - begin with "RT @"
-- `retweeted_username = ifelse(is_retweet, str_extract(text, regex), NA))`: this line of code determine if a tweet is a retweet - identified through the very last line of code - and, then, if it is, extracts the *first* username (note that `str_extract()`, instead of `str_extract_all()`, is used for this purpose), using the same regex used earlier
-
-We'll use a regular expression, or regex, to do so.
-
-Find one of the regular expression (or regex) patterns that are in an answer on this page; all should work, but some work a bit easier than others: https://stackoverflow.com/questions/18164839/get-twitter-username-with-regex-in-r
-
+We will use the **quanteda** R package to create a document term matrix. To do so, we will use the `tokens()` function, which takes as a first argument the column of a data frame with text. An easy way to do this is via the `pull()` function, which returns just one column from a data frame. Pass to `pull()` the name of your data frame and the name of the column `text`, e.g., `pull(my_data_frame, text)`, directly to the tokens function.
 
 ```{r}
-regex <- ""
-
-my_data_frame <- my_data_frame %>% 
-  mutate(first_four_chars = str_sub(text, start = 1, end = 4),
-         is_retweet = str_detect(first_four_chars, "RT @"),
-         retweeted_username = ifelse(is_retweet, str_extract(text, regex), NA))
+# install.packages("quanteda")
+library(quanteda)
+my_tokens <- tokens()
 ```
 
-Let's put the retweets in their own data frame, called `retweets`.
+Run `?tokens` in your console. Make some changes to the arguments to process the data in a way that is suited to the Twitter data (check out the arguments that begin `remove_`).
+
+Once you have tokenized the text ina  way that you think is suitable, proceed to the next function, `dfm()`, which creates a document term matrix.
 
 ```{r}
-retweets <- my_data_frame %>% 
-  filter(is_retweet) %>% 
-  select(from_user, retweeted_username) %>% 
-  mutate(retweeted_username = str_trim(retweeted_username))
+my_dfm <- dfm(my_tokens)
 ```
 
-The very last line `mutate(all_mentions = str_trim(all_mentions))` - is only necessary if the regex you used left an extra space at the beginning or at the end of the screen name. If you don't have an extra space, it won't hurt, though.
+One argument that you can add to `dfm()` that is commonly helpful is `remove = stopwords("english")`. There are a number of options for how you remove stopwords, or common words: check `?stopwords()` and see how to try out the different options. Another argument that is helpful argument is `stem`, which can be set to `TRUE` but defaults to `FALSE`. If set to true, words will be reduced to a common "stem," e.g., the words "writing" and "written" may be reduced to "writ".
 
-## Extracting mentions
+# Creating output
 
-Next, let's get the mentions. Start by replacing `my_data_frame` with the name of your data (the one you read in in the previous step). 
+Though a basic step, assessing the most frequent terms can be powerful. The `topfeatures()` function can be helpful for this; simply pass `my_dfm` as the first argument to it to see the results.
 
 ```{r}
-my_data_frame <- my_data_frame %>% 
-  mutate(all_mentions = str_extract_all(text, regex)) %>% 
-  mutate(has_mention = ifelse(!is.na(all_mentions), TRUE, FALSE)) %>% 
-  unnest(all_mentions)
+topfeatures(my_dfm)
 ```
 
-Let's put these into their own data frame, too.
+Can you change the number of terms that are returned (hint: check `?topfeatures`)? Are the results interpretable? If not, what changes can you make (either through what you pass to `tokens()` or `dfm()`) to improve the output?
+
+A common representation that can be helpful for communicating what the most frequent terms are is a word cloud; simply pass `my_dfm` to `textplot_wordcloud()` (and check `?textplot_wordcloud` to see the options you can change).
 
 ```{r}
-mentions <- my_data_frame %>% 
-  filter(has_mention) %>% 
-  mutate(all_mentions = str_trim(all_mentions)) %>% 
-  select(from_user, all_mentions)
+textplot_wordcloud(my_dfm)
 ```
 
-## Putting the edgelist together
-
-Now, we are ready to put the pieces together, in order to construct an edgelist. An edgelist is a common social network analysis data structure that has columns for the "sender" and "receiver" of interactions, or relations. For example, we can consider the person retweeting someone else "sending" a retweet to the person who is retweeted, who "receives" the retweet. For mentions, someone "sends" the mention to someone who is mentioned, who can be considered to "receive" it. This will require one last processing step. Be sure to change the name of the data frame, again.
-
-Take a look at each data frame we created; type `mentions` and `retweets`, below:
-
-```{r}
-retweets
+While wordclouds are common (and are fun to interpret), there are a number of other representations of how frequent terms are (and many analyses that can be run using text data). If you made it this far, check out the Quanteda Tutorials book: https://tutorials.quanteda.io/.
 ```
-
-```{r}
-mentions
-```
-
-What needs to happen to these to make them easier to work with in an edgelist? One step is to remove the "@" symbol from the columns we created - `retweeted_username` and `all_replies`.
-
-Let's do this for retweets.
-
-```{r}
-retweets <- retweets %>% 
-  mutate(retweeted_username = str_sub(retweeted_username, start = 2)) %>% 
-  mutate(interaction_type = "retweet") %>% 
-  select(sender = retweeted_username, receiver = from_user, interaction_type)
-```
-
-Almost there! Let's do the same for mentions; write code that will do this, starting with the `mentions` data frame, using the code above as an example. Consider which is the receiver and which is the sender for mentions.
-
-```{r}
-mentions <- mentions %>% 
-
-```
-
-There is some code below if you get stuck.
-
-```{r}
-mentions <- mentions %>% 
-    mutate(all_mentions= str_sub(all_mentions, start = 2)) %>% 
-    mutate(interaction_type = "mentions") %>% 
-    select(sender = from_user, receiver = interaction_type, interaction_type)
-```
-    
-Finally, let's create an edgelist:
-
-```{r}
-edgelist <- bind_rows(retweets, mentions)
-edgelist
-```
-
-# Plotting the network
-
-We'll use the **tidygraph** and **ggraph** packages to visualize the data.
-
-```{r}
-# install.packages(c("tidygraph", "ggraph"))
-library(tidygraph)
-library(ggraph)
-```
-We'll use the `as_tbl_graph()` function, which (by default) identified the first column as the "sender" and the second as the "receiver." Let's look at the object it creates, too.
-
-```{r}
-g <- as_tbl_graph(edgelist)
-g
-```
-
-Next, we'll use the `ggraph()` function. Run the code below, and then uncomment, one at a time, the next two lines (the two beginning `geom_()`, running the code after uncommenting each line).
-
-```{r}
-g %>% 
-  ggraph() +
-  geom_node_point() +
-  # geom_node_text(aes(label = name)) +
-  # geom_edge_link() +
-  theme_graph()
-```
-
-Finally, lets size the points based on a measure of centrality, typically a measure of how (potentially) influence an individual may be, based on the interactions observed.
-
-```{r}
-g %>% 
-  mutate(centrality = centrality_authority()) %>% 
-  ggraph() +
-  geom_node_point(aes(size = centrality, color = centrality)) +
-  scale_color_continuous(guide = 'legend') + 
-  geom_node_text(aes(label = name)) +
-  geom_edge_link() +
-  theme_graph()
-```
-
-There is much more you can do with **ggraph** (and **tidygraph**); check out the **ggraph** tutorial here: https://ggraph.data-imaginist.com/
