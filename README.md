@@ -9,6 +9,13 @@ Wednesday, 10/23, 9:00am - 3:50pm
 - [Spencer Greenhalgh](https://github.com/greenhas)
 - [Joshua Rosenberg](https://github.com/jrosen48/)
 
+## Optional Pre- and Post-Survey
+
+We are trying to better understand how educational researchers learn to use R to carry out educational research (and instructional design- and learning, design, and technology-related work). Please consider completing the following pre- and post-surveys (to receive up to $15.00 in compensation if you complete both parts and upload an R Markdown document you worked on).
+
+- Pre-survey: http://bit.ly/r-at-aect-pre
+- Post-survey: http://bit.ly/r-at-eact-post
+
 ## Description
 
 In this workshop, we help participants to learn how to use the R statistical software to analyze Internet data that is relevant to educational research. In particular, we on learning how to get started with R, how to analyze social media data from an already-completed project and beginning one’s own analysis. This workshop promises to support participants to become more confident in their ability to engage in analyzing complex data sources collected from digital sources. 
