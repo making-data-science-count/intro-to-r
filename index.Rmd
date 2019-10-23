@@ -31,6 +31,9 @@ class: inverse, center, middle
 **Access our slide deck here:**  
 https://bretsw.github.io/aect19-workshop/
 
+**Chat with Josh here:**
+https://tennessee.zoom.us/my/jmrosenberg
+
 **Follow us on Twitter:**  
 [@bretsw](https://twitter.com/bretsw)  
 [@spgreenhalgh](https://twitter.com/spgreenhalgh)  
@@ -45,7 +48,7 @@ https://bretsw.github.io/aect19-workshop/
   * *Primary area of interest:* social media and K-20 educators' professional learning
 * **Dr. Spencer Greenhalgh**
   * Assistant Professor, Information Communication Technology, University of Kentucky
-  * *Primary area of interest:* digital contexts for teaching, learning, and other meaningful practices
+  * *Primary area of interest:* implications of digital contexts for teaching, learning, and other meaningful practices
 * **Dr. Joshua Rosenberg**
   * Assistant Professor, STEM Education, University of Tennessee, Knoxville
   * *Primary area of interest:* data science in education + data science education
