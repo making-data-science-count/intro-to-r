@@ -143,8 +143,8 @@ Let's do this for retweets.
 ```{r}
 retweets <- retweets %>% 
   mutate(retweeted_username = str_sub(retweeted_username, start = 2)) %>%
-  mutate(interaction_type = "retweet") %>% 
-  select(sender = retweeted_username, receiver = from_user, interaction_type)
+  mutate(interaction_type = "retweet") %>% # this is so we can distinguish between retweets and mentions
+  select(sender = retweeted_username, receiver = from_user, interaction_type) # this is so the columns have the same names for when we combine them back together
 ```
 
 Almost there! Let's do the same for mentions; write code that will do this, starting with the `mentions` data frame, using the code above as an example. Consider which is the receiver and which is the sender for mentions.
