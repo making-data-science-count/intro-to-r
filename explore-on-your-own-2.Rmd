@@ -154,8 +154,6 @@ mentions <- mentions %>%
   
 ```
 
-(There is some code at the very bottom if you get stuck.)
-
 Finally, let's create an edgelist:
 
 ```{r}
