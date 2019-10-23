@@ -111,6 +111,8 @@ gss_cat %>%
   mutate()
 ```
 
+# End of part 1!
+
 # Demo doc (part 2): Try it out!
 
 `geom_jitter()` is exactly like geom_point, but with a small amount of x- and y-axis random noise added.
@@ -170,6 +172,8 @@ ggplot(gss_cat, aes(x = age, y = tvhours)) +
   facet_wrap(~year)
 ```
 
+# End of part 2!
+
 # Demo doc (part 3): Try it out!
 
 Let's run a regression.
@@ -179,11 +183,18 @@ m1 <- lm(tvhours ~ age, data = gss_cat)
 summary(m1)
 ```
 
-**Try it out!**
-
-Can you add another variable to the model? If you need to check what variables are in `gss_cat`, print that object to the console.
+Character strings and factors are automatically dummy-coded by `lm()`:
 
 ```{r}
-m2 <- lm(tvhours ~ age + , data = gss_cat)
-summary(m1)
+m2 <- lm(tvhours ~ marital, data = gss_cat)
+summary(m2)
+```
+
+**Try it out!**
+
+Can you add another variable to the model? If you need to check what variables are in `gss_cat`, print that object to the console. What do you notice about the output?
+
+```{r}
+m3 <- lm(tvhours ~ age + , data = gss_cat)
+summary(m3)
 ```
