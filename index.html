@@ -203,7 +203,7 @@ install.packages("dplyr")
 
 You can also navigate to the Packages pane, and then click "Install", which will work the same as the line of code above. This is a way to install a package using code or part of the R Studio interface. 
 
-Usually, writing code is a bit quicker, but using the interface can be very useful and complimentary to use of code. 
+Usually, writing code is a bit quicker, but using the interface can be very useful and complementary to use of code. 
 
 ---
 
@@ -219,9 +219,11 @@ library(dplyr)
 We only have to install a package once, but to use it, we have to load it each time we start a new R session.
 
 &gt; A package is a like a book, a library is like a library; you use library() to check a package out of the library
-&gt; - Hadley Wickham, Chief Scientist, R Studio
+&gt; (Hadley Wickham, Chief Scientist, R Studio)
 
 --- 
+
+---
 
 # Configuring R Studio
 
@@ -256,7 +258,7 @@ class: inverse, center, middle
 
 * Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
 
-*You can find the demo doc in RStudio or in your downloaded repository files—it is titled `demo-doc.Rmd`*
+*You can find the demo doc in RStudio or in your downloaded repository files—it is titled "demo-doc.Rmd"*
 
 *The doc is also [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
@@ -566,7 +568,7 @@ library(readxl)
 
 ```r
 my_data &lt;-
-  read_excel("path/to/file.xlsx")
+  read_excel("path/to/file.sav")
 ```
 
 ## Loading SAV files
@@ -823,14 +825,6 @@ m2_mlm
 ##                        student_joy  student_broad_interest:student_joy  
 ##                            0.27409                             0.01991
 ```
-
----
-
-class: inverse, center, middle
-
-# Demo doc (part 3)
-
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 
@@ -1463,16 +1457,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##      var1 var2   
 ##     &lt;dbl&gt; &lt;chr&gt;  
-##  1 0.0663 lesser 
-##  2 0.264  lesser 
-##  3 0.969  greater
-##  4 0.0877 lesser 
-##  5 0.765  greater
-##  6 0.374  lesser 
-##  7 0.505  greater
-##  8 0.158  lesser 
-##  9 0.697  greater
-## 10 0.184  lesser
+##  1 0.920  greater
+##  2 0.0457 lesser 
+##  3 0.0426 lesser 
+##  4 0.722  greater
+##  5 0.331  lesser 
+##  6 0.692  greater
+##  7 0.146  lesser 
+##  8 0.900  greater
+##  9 0.863  greater
+## 10 0.164  lesser
 ```
 
 ---
@@ -1496,16 +1490,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##      var1 var2       
 ##     &lt;dbl&gt; &lt;chr&gt;      
-##  1 0.0663 very little
-##  2 0.264  lesser     
-##  3 0.969  a lot      
-##  4 0.0877 very little
-##  5 0.765  a lot      
-##  6 0.374  lesser     
-##  7 0.505  greater    
-##  8 0.158  very little
-##  9 0.697  greater    
-## 10 0.184  very little
+##  1 0.920  a lot      
+##  2 0.0457 very little
+##  3 0.0426 very little
+##  4 0.722  greater    
+##  5 0.331  lesser     
+##  6 0.692  greater    
+##  7 0.146  very little
+##  8 0.900  a lot      
+##  9 0.863  a lot      
+## 10 0.164  very little
 ```
 
 ---

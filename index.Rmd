@@ -214,7 +214,7 @@ install.packages("dplyr")
 
 You can also navigate to the Packages pane, and then click "Install", which will work the same as the line of code above. This is a way to install a package using code or part of the R Studio interface. 
 
-Usually, writing code is a bit quicker, but using the interface can be very useful and complimentary to use of code. 
+Usually, writing code is a bit quicker, but using the interface can be very useful and complementary to use of code. 
 
 ---
 
@@ -229,9 +229,11 @@ library(dplyr)
 We only have to install a package once, but to use it, we have to load it each time we start a new R session.
 
 > A package is a like a book, a library is like a library; you use library() to check a package out of the library
-> - Hadley Wickham, Chief Scientist, R Studio
+> (Hadley Wickham, Chief Scientist, R Studio)
 
 --- 
+
+---
 
 # Configuring R Studio
 
@@ -266,7 +268,7 @@ class: inverse, center, middle
 
 * Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
 
-*You can find the demo doc in RStudio or in your downloaded repository files—it is titled `demo-doc.Rmd`*
+*You can find the demo doc in RStudio or in your downloaded repository files—it is titled "demo-doc.Rmd"*
 
 *The doc is also [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
@@ -502,7 +504,7 @@ library(readxl)
 
 ```{r, eval = FALSE}
 my_data <-
-  read_excel("path/to/file.xlsx")
+  read_excel("path/to/file.sav")
 ```
 
 ## Loading SAV files
@@ -673,14 +675,6 @@ library(lme4)
 m2_mlm <- lmer(student_epistemic_beliefs ~ student_broad_interest + student_joy + student_broad_interest:student_joy + (1|teacher_id), data = student_mot_vars)
 m2_mlm
 ```
-
----
-
-class: inverse, center, middle
-
-# Demo doc (part 3)
-
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 
