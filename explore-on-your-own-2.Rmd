@@ -142,7 +142,7 @@ Let's do this for retweets.
 
 ```{r}
 retweets <- retweets %>% 
-  mutate(retweeted_username = str_sub(retweeted_username, start = 2)) %>% 
+  mutate(retweeted_username = str_sub(retweeted_username, start = 2)) %>%
   mutate(interaction_type = "retweet") %>% 
   select(sender = retweeted_username, receiver = from_user, interaction_type)
 ```
@@ -151,18 +151,11 @@ Almost there! Let's do the same for mentions; write code that will do this, star
 
 ```{r}
 mentions <- mentions %>% 
-
+  
 ```
 
-There is some code below if you get stuck.
+(There is some code at the very bottom if you get stuck.)
 
-```{r}
-mentions <- mentions %>% 
-    mutate(all_mentions= str_sub(all_mentions, start = 2)) %>% 
-    mutate(interaction_type = "mentions") %>% 
-    select(sender = from_user, receiver = interaction_type, interaction_type)
-```
-    
 Finally, let's create an edgelist:
 
 ```{r}
