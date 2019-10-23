@@ -142,27 +142,18 @@ Let's do this for retweets.
 
 ```{r}
 retweets <- retweets %>% 
-  mutate(retweeted_username = str_sub(retweeted_username, start = 2)) %>% 
-  mutate(interaction_type = "retweet") %>% 
-  select(sender = retweeted_username, receiver = from_user, interaction_type)
+  mutate(retweeted_username = str_sub(retweeted_username, start = 2)) %>%
+  mutate(interaction_type = "retweet") %>% # this is so we can distinguish between retweets and mentions
+  select(sender = retweeted_username, receiver = from_user, interaction_type) # this is so the columns have the same names for when we combine them back together
 ```
 
 Almost there! Let's do the same for mentions; write code that will do this, starting with the `mentions` data frame, using the code above as an example. Consider which is the receiver and which is the sender for mentions.
 
 ```{r}
 mentions <- mentions %>% 
-
+  
 ```
 
-There is some code below if you get stuck.
-
-```{r}
-mentions <- mentions %>% 
-    mutate(all_mentions= str_sub(all_mentions, start = 2)) %>% 
-    mutate(interaction_type = "mentions") %>% 
-    select(sender = from_user, receiver = interaction_type, interaction_type)
-```
-    
 Finally, let's create an edgelist:
 
 ```{r}
