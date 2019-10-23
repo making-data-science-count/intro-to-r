@@ -59,6 +59,14 @@ include_graphics("img/koehler-diaspora-circa-2017.jpg")
 
 ---
 
+# How We Teach
+
+```{r, out.width = "480px", echo = FALSE, fig.align = "center"}
+include_graphics("img/tech_support_cheat_sheet.png")
+```
+
+---
+
 class: inverse, center, middle
 
 # Agenda
@@ -67,15 +75,16 @@ class: inverse, center, middle
 
 # Morning Agenda
 
-1. Introductions
+1. Instructor introductions
 1. Pre-survey
+1. Attendee introductions
 1. Why learn R?
+1. Download the repository
 1. Getting started with R Studio
-1. Computer science foundations
-1. Processing data
+1. Demo Doc Part 1: Processing data
 1. Loading data
-1. Visualizing data
-1. Modeling data 
+1. Demo Doc Part 2: Visualizing data
+1. Demo Doc Part 3: Modeling data 
 1. Questions
 1. Lunch break
 
@@ -83,15 +92,16 @@ class: inverse, center, middle
 
 # Afternoon Agenda
 
+
+1. Considerations for using social media data in LD&T research
+  1. Conducting ethical research
+  1. Framing the research
+  1. Organizing the research process
+  1. Collecting data
+  1. Analyzing data
+  1. Disseminating research
+  1. Learning and doing more with R
 1. Self-guided exploration (Option A: Text analysis; Option B: Social network analysis)
-1. Considerations for Using Social Media Data in Learning Design and Technology Research
-1. Conducting ethical research
-1. Framing the research
-1. Organizing the research process
-1. Collecting data
-1. Analyzing data
-1. Disseminating research
-1. Learning and doing more with R
 1. Questions
 1. Post-survey + (optional) upload your .Rmd file for the day
 
@@ -127,6 +137,26 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
+# Download the repository
+
+---
+
+# Download the repository
+
+You can access all of the workshop materials at: https://github.com/bretsw/aect19-workshop/
+
+---
+
+# Download the repository
+
+```{r, out.width = "720px", echo = FALSE, fig.align = "center"}
+include_graphics("img/download_repo_screenshot.png")
+```
+
+---
+
+class: inverse, center, middle
+
 # Getting started with R Studio
 
 ---
@@ -149,13 +179,24 @@ Open R Studio. Find the console window and type in `2 + 2`. If what you can gues
 
 ---
 
-# Creating Projects
+# Working With Projects
 
 Before proceeding, we're going to take a few steps to set ourselves to make the analysis easier; namely, through the use of Projects, an R Studio-specific organizational tool. 
 
-To create a project, in R Studio, navigate to "File" and then "New Directory". Then, click "New Project".
+We already have a project set up. Navigate to the downloaded repo files and open `aect-workshop-2019.Rproj`
+
+(To create a project in R Studio, you can navigate to "File" and then "New Directory". Then, click "New Project".)
 
 Names should be short and easy-to-remember but also informative.
+
+---
+
+# Looking at RStudio
+
+```{r, out.width = "720px", echo = FALSE, fig.align = "center"}
+include_graphics("img/RStudio.png")
+```
+
 
 ---
 
@@ -190,47 +231,7 @@ We only have to install a package once, but to use it, we have to load it each t
 > A package is a like a book, a library is like a library; you use library() to check a package out of the library
 > - Hadley Wickham, Chief Scientist, R Studio
 
----
-
-# Vignettes
-
-Vignettes are long-form documentation (and tutorials) that can provide a helpful introduction to a package.
-
-Run `vignette()` in order to view *all* of the vignettes available for a package:
-
-```{r, eval = FALSE}
-vignette(package = "dplyr")
-```
-
-Then, you can load a specific vignette.
-
-```{r, eval = FALSE}
-vignette("dplyr", package = "dplyr")
-```
-
-These are also available through CRAN (i.e., https://cran.r-project.org/web/packages/dplyr/index.html)
-
----
-
-# Using a specific function
-
-If you know the specific function that you want to look up, you can run this in the R Studio console:
-
-```{r, eval = FALSE}
-?dplyr::filter
-```
-
-Once you know what you want to do with the function, you can run it in your code:
-
-```{r}
-dat <- # example data frame
-  tibble(letter = c("A", "A", "A", "B", "B"),
-         number = c(1L, 2L, 3L, 4L, 5L))
-
-filter(dat, letter == "A")
-```
-
----
+--- 
 
 # Configuring R Studio
 
@@ -248,7 +249,7 @@ The tidyverse is a set of packages for data manipulation, exploration, and visua
 
 The packages contained in the Tidyverse provide useful functions that augment base R functionality.
 
-You can installing and load the complete tidyverse with:
+You can instal and load the complete tidyverse with:
 
 ```{r, eval = FALSE}
 install.packages("tidyverse")
@@ -257,142 +258,32 @@ install.packages("tidyverse")
 ```{r, message = FALSE}
 library(tidyverse)
 ```
+---
+
+class: inverse, center, middle
+
+# Demo doc (part 0): Try it out!
+
+* Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
+
+*You can find the demo doc in RStudio or in your downloaded repository files—it is titled `demo-doc.Rmd`*
+
+*The doc is also [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 
 class: inverse, center, middle
 
-# Computer science foundations
+# Demo doc (part 1): Try it out!
+
+* Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
+
+*You can find the demo doc in RStudio or in your downloaded repository files—it is titled `demo-doc.Rmd`*
+
+*The doc is also [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 
-# Data structures
-
-- Data Frame
-
-````{r}
-data.frame(var1 = c("a", "b", "c"),
-           var2 = c(4, 2, 5))
-```
-
-- Tibble
-
-```{r}
-library(tidyverse)
-tibble(var1 = c("a", "b", "c"),
-       var2 = c(4, 2, 5))
-```
-
----
-
-# Data structures
-
-```{r}
-vec1 = c("a", "b", "c")
-vec1 
-```
-
-```{r}
-vec2 = c(4, 2, 5)
-vec2
-```
-
-```{r}
-tibble(var1 = vec1,
-       var2 = vec2)
-```
-
----
-
-# Conditional logic 
-
-- `ifelse()`
-
-```{r}
-vec1 <- runif(10) # generates random number between 0 and 1
-d1 <- tibble(var1 = vec1)
-
-d1 %>% 
-  mutate(var2 = ifelse(var1 >= .5, "greater", "lesser"))
-```
-
----
-
-# Conditional logic 
-
-- `dplyr::case_when()`
-
-```{r}
-d1 %>% 
-  mutate(var2 = case_when(
-    var1 >= .75 ~ "a lot",
-    var1 >= .5 & var1 < .75 ~ "greater",
-    var1 >= .25 & var1 < .5  ~ "lesser",
-    var1 < .25 ~ "very little" 
-  ))
-```
-
----
-
-# Objects, functions, directories, and data structures
-
-Here's a short URL: `https://goo.gl/bUeMhV`
-
-This is what it resolves to (it's a CSV file): `https://raw.githubusercontent.com/data-edu/data-science-in-education/master/data/pisaUSA15/stu-quest.csv`
-
-This chunk of code will save that file to a data directory in our working environment.
-
-```{r, eval = FALSE}
-student_responses_url <-
-  "https://goo.gl/bUeMhV"
-
-student_responses_file_name <-
-  paste0(getwd(), "/data/student-responses-data.csv")
-
-download.file(
-  url = student_responses_url,
-  destfile = student_responses_file_name)
-```
-
----
-
-# Step 1
-
-1. The *character string* `"https://goo.gl/wPmujv"` is being saved to an *object* called `student_responses_url`.
-
-```{r, eval = FALSE}
-student_responses_url <-
-  "https://goo.gl/bUeMhV"
-```
-
----
-
-# Step 2
-
-2. We concatenate the working directory file path to the desired file name for the CSV using a *function* called `str_c`. This is stored in another *object* called `student_reponses_file_name`. This creates a file name with a *file path* in your working directory and it saves the file in the folder that you are working in. 
-
-```{r, eval = FALSE}
-student_responses_file_name <-
-  str_c(getwd(), "./data/student-responses-data.csv")
-```
-
----
-
-# Step 3
-
-3. The `student_responses_url` *object* is passed to the `url` argument of the *function* called `download.file()` along with `student_responses_file_name`, which is passed to the `destfile` argument.
-
-In short, the `download.file()` function needs to know
-- where the file is coming from (which you tell it through the `url`) argument and
-- where the file will be saved (which you tell it through the `destfile` argument).
-
-```{r, eval = FALSE}
-download.file(
-  url = student_responses_url,
-  destfile = student_responses_file_name)
-```
-
----
 
 class: inverse, center, middle
 
@@ -562,15 +453,6 @@ student_responses %>%
 
 On average, there are around 32 (*SD* = 8.61) students in each teachers' class.
 
----
-
-class: inverse, center, middle
-
-# Demo doc (part 1): Try it out!
-
-* Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
-
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 
@@ -651,6 +533,18 @@ That will save a CSV file entitled `student-responses.csv` in the working direct
 
 class: inverse, center, middle
 
+# Demo doc (part 2): Try it out!
+
+* Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
+
+*You can find the demo doc in RStudio or in your downloaded repository files—it is titled `demo-doc.Rmd`*
+
+*The doc is also [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+
+---
+
+class: inverse, center, middle
+
 # Visualizing data
 
 ---
@@ -714,9 +608,13 @@ ggplot(student_mot_vars,
 
 class: inverse, center, middle
 
-# Demo doc (part 2)
+# Demo doc (part 3): Try it out!
 
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+* Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
+
+*You can find the demo doc in RStudio or in your downloaded repository files—it is titled `demo-doc.Rmd`*
+
+*The doc is also [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 
@@ -794,83 +692,17 @@ class: inverse, center, middle
 
 # Afternoon Agenda
 
+1. Considerations for using social media data in LD&T research
+  1. Conducting ethical research
+  1. Framing the research
+  1. Organizing the research process
+  1. Collecting data
+  1. Analyzing data
+  1. Disseminating research
+  1. Learning and doing more with R
 1. Self-guided exploration (Option A: Text analysis; Option B: Social network analysis)
-1. Considerations for Using Social Media Data in Learning Design and Technology Research
-1. Conducting ethical research
-1. Framing the research
-1. Organizing the research process
-1. Collecting data
-1. Analyzing data
-1. Disseminating research
-1. Learning and doing more with R
 1. Questions
 1. Post-survey + (optional) upload your .Rmd file for the day
-
----
-
-class: inverse, center, middle
-
-# Self-guided exploration 
-
----
-
-# Introduction to text analysis
-
---
-
-There are all kinds of things you might wonder about the text of a document. 
-
-For instance:
-
---
-
-* How many words are in a document?
-
---
-
-* Which words are most used most often in a text?
-
---
-
-* How many times is a specific word used?
-
----
-
-# Introduction to social network analysis
-
---
-
-```{r, out.width = "480px", echo = FALSE, fig.align = "center"}
-include_graphics("img/csed-graph-forced-atlas8.png")
-```
-
-*A network is a set of objects, and network analysis is interested in the relationships between them.*
-
----
-
-# Introduction to social network analysis
-
-```{r, out.width = "480px", echo = FALSE, fig.align = "center"}
-include_graphics("img/csed-graph-forced-atlas8.png")
-```
-
-*So, what are the objects? How are they related?*
-
----
-
-# Self-guided exploration 
-
---
-
-### Option A: Text analysis (Difficulty: Moderate)
-
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/explore-on-your-own-1.Rmd) in the repository*
-
---
-
-### Option B: Social network analysis (Difficulty: Hard)
-
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/explore-on-your-own-2.Rmd) in the repository*
 
 ---
 
@@ -894,7 +726,7 @@ Our purpose in this chapter is to suggest considerations that LDT professionals 
 
 --
 
-* Our puprose is *not* to dismiss traditional research methods
+* Our purpose is *not* to dismiss traditional research methods
 
 --
 
@@ -916,17 +748,17 @@ Our purpose in this chapter is to suggest considerations that LDT professionals 
 
 class: inverse, center, middle
 
-# Conducting ethical research
-
----
-
-class: inverse, center, middle
-
 # What's your project?
 
 ```{r, out.width = "600px", echo = FALSE, fig.align = "center"}
 include_graphics("img/project-legos.jpg")
 ```
+
+---
+
+class: inverse, center, middle
+
+# Conducting ethical research
 
 ---
 
@@ -1280,6 +1112,83 @@ With one exception, can install via `install.packages(<name-of-package)`, i.e., 
 
 ---
 
+class: inverse, center, middle
+
+# Self-guided exploration 
+
+---
+
+# How We Teach
+
+```{r, out.width = "480px", echo = FALSE, fig.align = "center"}
+include_graphics("img/tech_support_cheat_sheet.png")
+```
+
+---
+
+# Introduction to text analysis
+
+--
+
+There are all kinds of things you might wonder about the text of a document. 
+
+For instance:
+
+--
+
+* How many words are in a document?
+
+--
+
+* Which words are most used most often in a text?
+
+--
+
+* How many times is a specific word used?
+
+---
+
+# Introduction to social network analysis
+
+--
+
+```{r, out.width = "480px", echo = FALSE, fig.align = "center"}
+include_graphics("img/csed-graph-forced-atlas8.png")
+```
+
+*A network is a set of objects, and network analysis is interested in the relationships between them.*
+
+---
+
+# Introduction to social network analysis
+
+```{r, out.width = "480px", echo = FALSE, fig.align = "center"}
+include_graphics("img/csed-graph-forced-atlas8.png")
+```
+
+*So, what are the objects? How are they related?*
+
+---
+
+# Self-guided exploration 
+
+--
+
+### Option A: Text analysis (Difficulty: Moderate)
+
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/explore-on-your-own-1.Rmd) in the repository*
+
+*You can also find it in the `explore-on-your-own1.Rmd1` file*
+
+--
+
+### Option B: Social network analysis (Difficulty: Hard)
+
+*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/explore-on-your-own-2.Rmd) in the repository*
+
+*You can also find it in the `explore-on-your-own2.Rmd1` file*
+---
+
 # Acknowledgments
 
 Thank you to [Emily Bovee](https://github.com/emilybovee) for co-developing the workshop this workshop is adapted from: https://github.com/jrosen48/MTSU-workshop and https://github.com/jrosen48/MSU-workshop-2019
@@ -1317,3 +1226,188 @@ http://bit.ly/r-at-eact-post
 ```{r, out.width = "720px", echo = FALSE, fig.align = "center"}
 include_graphics("img/survey.jpg")
 ```
+
+
+---
+
+class: inverse, center, top
+
+# Reference Material 
+
+The following slides include material that we cut for time or simplicity, but which may be helpful for you later.
+
+---
+
+class: inverse, center, middle
+
+# Computer science foundations
+
+---
+
+# Data structures
+
+- Data Frame
+
+````{r}
+data.frame(var1 = c("a", "b", "c"),
+           var2 = c(4, 2, 5))
+```
+
+- Tibble
+
+```{r}
+library(tidyverse)
+tibble(var1 = c("a", "b", "c"),
+       var2 = c(4, 2, 5))
+```
+
+---
+
+# Data structures
+
+```{r}
+vec1 = c("a", "b", "c")
+vec1 
+```
+
+```{r}
+vec2 = c(4, 2, 5)
+vec2
+```
+
+```{r}
+tibble(var1 = vec1,
+       var2 = vec2)
+```
+
+---
+
+# Conditional logic 
+
+- `ifelse()`
+
+```{r}
+vec1 <- runif(10) # generates random number between 0 and 1
+d1 <- tibble(var1 = vec1)
+
+d1 %>% 
+  mutate(var2 = ifelse(var1 >= .5, "greater", "lesser"))
+```
+
+---
+
+# Conditional logic 
+
+- `dplyr::case_when()`
+
+```{r}
+d1 %>% 
+  mutate(var2 = case_when(
+    var1 >= .75 ~ "a lot",
+    var1 >= .5 & var1 < .75 ~ "greater",
+    var1 >= .25 & var1 < .5  ~ "lesser",
+    var1 < .25 ~ "very little" 
+  ))
+```
+
+---
+
+# Objects, functions, directories, and data structures
+
+Here's a short URL: `https://goo.gl/bUeMhV`
+
+This is what it resolves to (it's a CSV file): `https://raw.githubusercontent.com/data-edu/data-science-in-education/master/data/pisaUSA15/stu-quest.csv`
+
+This chunk of code will save that file to a data directory in our working environment.
+
+```{r, eval = FALSE}
+student_responses_url <-
+  "https://goo.gl/bUeMhV"
+
+student_responses_file_name <-
+  paste0(getwd(), "/data/student-responses-data.csv")
+
+download.file(
+  url = student_responses_url,
+  destfile = student_responses_file_name)
+```
+
+---
+
+# Step 1
+
+1. The *character string* `"https://goo.gl/wPmujv"` is being saved to an *object* called `student_responses_url`.
+
+```{r, eval = FALSE}
+student_responses_url <-
+  "https://goo.gl/bUeMhV"
+```
+
+---
+
+# Step 2
+
+2. We concatenate the working directory file path to the desired file name for the CSV using a *function* called `str_c`. This is stored in another *object* called `student_reponses_file_name`. This creates a file name with a *file path* in your working directory and it saves the file in the folder that you are working in. 
+
+```{r, eval = FALSE}
+student_responses_file_name <-
+  str_c(getwd(), "./data/student-responses-data.csv")
+```
+
+---
+
+# Step 3
+
+3. The `student_responses_url` *object* is passed to the `url` argument of the *function* called `download.file()` along with `student_responses_file_name`, which is passed to the `destfile` argument.
+
+In short, the `download.file()` function needs to know
+- where the file is coming from (which you tell it through the `url`) argument and
+- where the file will be saved (which you tell it through the `destfile` argument).
+
+```{r, eval = FALSE}
+download.file(
+  url = student_responses_url,
+  destfile = student_responses_file_name)
+```
+
+---
+
+# Vignettes
+
+Vignettes are long-form documentation (and tutorials) that can provide a helpful introduction to a package.
+
+Run `vignette()` in order to view *all* of the vignettes available for a package:
+
+```{r, eval = FALSE}
+vignette(package = "dplyr")
+```
+
+Then, you can load a specific vignette.
+
+```{r, eval = FALSE}
+vignette("dplyr", package = "dplyr")
+```
+
+These are also available through CRAN (i.e., https://cran.r-project.org/web/packages/dplyr/index.html)
+
+---
+
+# Using a specific function
+
+If you know the specific function that you want to look up, you can run this in the R Studio console:
+
+```{r, eval = FALSE}
+?dplyr::filter
+```
+
+Once you know what you want to do with the function, you can run it in your code:
+
+```{r}
+dat <- # example data frame
+  tibble(letter = c("A", "A", "A", "B", "B"),
+         number = c(1L, 2L, 3L, 4L, 5L))
+
+filter(dat, letter == "A")
+```
+
+---

@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Demo doc (part 1): Try it out!
+# Demo doc (part 0): Try it out!
 
 Let's first load the tidyverse suite of packages.
 
@@ -30,6 +30,8 @@ Here is the data set we will use:
 ```{r}
 gss_cat
 ```
+
+# Demo doc (part 1): Try it out!
 
 # Select
 
