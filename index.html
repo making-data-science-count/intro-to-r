@@ -250,6 +250,7 @@ install.packages("tidyverse")
 ```r
 library(tidyverse)
 ```
+
 ---
 
 class: inverse, center, middle
@@ -261,6 +262,12 @@ class: inverse, center, middle
 *You can find the demo doc in RStudio or in your downloaded repository files—it is titled "demo-doc.Rmd"*
 
 *The doc is also [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+
+---
+
+# Looking at Demo Doc
+
+&lt;img src="img/RStudio.png" width="720px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -643,7 +650,7 @@ student_mot_vars &lt;- # save object student_mot_vars by...
 
 Notice the three parts of all `ggplot2` graphs: a) the data (`student_mot_vars`), b) an `aes()`thetic mapping, and c) a `geom`:
 
-&lt;img src="index_files/figure-html/unnamed-chunk-32-1.png" width="450px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-33-1.png" width="450px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -657,7 +664,7 @@ ggplot(student_mot_vars,
   geom_smooth(method = "lm")
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-33-1.png" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-34-1.png" width="350px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -674,7 +681,7 @@ ggplot(student_mot_vars,
   ylab("Student Broad Interest")
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-34-1.png" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-35-1.png" width="350px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1457,16 +1464,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##      var1 var2   
 ##     &lt;dbl&gt; &lt;chr&gt;  
-##  1 0.920  greater
-##  2 0.0457 lesser 
-##  3 0.0426 lesser 
-##  4 0.722  greater
-##  5 0.331  lesser 
-##  6 0.692  greater
-##  7 0.146  lesser 
-##  8 0.900  greater
-##  9 0.863  greater
-## 10 0.164  lesser
+##  1 0.124  lesser 
+##  2 0.492  lesser 
+##  3 0.238  lesser 
+##  4 0.937  greater
+##  5 0.737  greater
+##  6 0.229  lesser 
+##  7 0.180  lesser 
+##  8 0.549  greater
+##  9 0.618  greater
+## 10 0.0254 lesser
 ```
 
 ---
@@ -1490,16 +1497,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##      var1 var2       
 ##     &lt;dbl&gt; &lt;chr&gt;      
-##  1 0.920  a lot      
-##  2 0.0457 very little
-##  3 0.0426 very little
-##  4 0.722  greater    
-##  5 0.331  lesser     
-##  6 0.692  greater    
-##  7 0.146  very little
-##  8 0.900  a lot      
-##  9 0.863  a lot      
-## 10 0.164  very little
+##  1 0.124  very little
+##  2 0.492  lesser     
+##  3 0.238  very little
+##  4 0.937  a lot      
+##  5 0.737  greater    
+##  6 0.229  very little
+##  7 0.180  very little
+##  8 0.549  greater    
+##  9 0.618  greater    
+## 10 0.0254 very little
 ```
 
 ---
