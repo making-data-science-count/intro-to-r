@@ -260,6 +260,7 @@ install.packages("tidyverse")
 ```{r, message = FALSE}
 library(tidyverse)
 ```
+
 ---
 
 class: inverse, center, middle
@@ -271,6 +272,14 @@ class: inverse, center, middle
 *You can find the demo doc in RStudio or in your downloaded repository files—it is titled "demo-doc.Rmd"*
 
 *The doc is also [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
+
+---
+
+# Looking at Demo Doc
+
+```{r, out.width = "720px", echo = FALSE, fig.align = "center"}
+include_graphics("img/RStudio.png")
+```
 
 ---
 
