@@ -1,10 +1,6 @@
-# AECT-workshop-2019
+# An introduction to using R for data science (zero prerequisites required!)
 
-This is a repository for:
-
-*An introduction to using R for data science (zero prerequisites required!)*  
-
-By [Joshua Rosenberg](https://github.com/jrosen48/)
+This presentation is by [Joshua Rosenberg](https://joshuamrosenberg.com)
 
 ## Description
 
