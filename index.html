@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Online Data and Open Source Tools</title>
+    <title>https://github.com/making-data-science-count/intro-to-r</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Bret Staudt Willet, Spencer Greenhalgh, &amp; Joshua Rosenberg" />
-    <meta name="date" content="2019-10-23" />
+    <meta name="author" content="Joshua Rosenberg" />
+    <meta name="date" content="2020-01-23" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
@@ -14,100 +14,23 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Online Data and Open Source Tools
-## Analyzing Educational Internet Data Using R
-### Bret Staudt Willet, Spencer Greenhalgh, &amp; Joshua Rosenberg
-### October 23, 2019
+# <a href="https://github.com/making-data-science-count/intro-to-r" class="uri">https://github.com/making-data-science-count/intro-to-r</a>
+### Joshua Rosenberg
+### January 23, 2020
 
 ---
 
 
 
-
-class: inverse, center, middle
-
-**Access our slide deck here:**  
-https://bretsw.github.io/aect19-workshop/
-
-**Chat with Josh here:**
-https://tennessee.zoom.us/my/jmrosenberg
-
-**Follow us on Twitter:**  
-[@bretsw](https://twitter.com/bretsw)  
-[@spgreenhalgh](https://twitter.com/spgreenhalgh)  
-[@jrosenberg6432](https://twitter.com/jrosenberg6432)
-
 ---
 
-# Who We Are
+# Who Am I
 
-* **Bret Staudt Willet**
-  * PhD Candidate, Ed Psych &amp; Ed Tech, Michigan State University
-  * *Primary area of interest:* social media and K-20 educators' professional learning
-* **Dr. Spencer Greenhalgh**
-  * Assistant Professor, Information Communication Technology, University of Kentucky
-  * *Primary area of interest:* implications of digital contexts for teaching, learning, and other meaningful practices
 * **Dr. Joshua Rosenberg**
   * Assistant Professor, STEM Education, University of Tennessee, Knoxville
   * *Primary area of interest:* data science in education + data science education
 
 &lt;img src="img/koehler-diaspora-circa-2017.jpg" width="360px" style="display: block; margin: auto;" /&gt;
-
----
-
-# How We Teach
-
-&lt;img src="img/tech_support_cheat_sheet.png" width="480px" style="display: block; margin: auto;" /&gt;
-
----
-
-class: inverse, center, middle
-
-# Agenda
-
----
-
-# Morning Agenda
-
-1. Instructor introductions
-1. Pre-survey
-1. Attendee introductions
-1. Why learn R?
-1. Download the repository
-1. Getting started with R Studio
-1. Demo Doc Part 1: Processing data
-1. Loading data
-1. Demo Doc Part 2: Visualizing data
-1. Demo Doc Part 3: Modeling data 
-1. Questions
-1. Lunch break
-
----
-
-# Afternoon Agenda
-
-
-1. Considerations for using social media data in LD&amp;T research
-  1. Conducting ethical research
-  1. Framing the research
-  1. Organizing the research process
-  1. Collecting data
-  1. Analyzing data
-  1. Disseminating research
-  1. Learning and doing more with R
-1. Self-guided exploration (Option A: Text analysis; Option B: Social network analysis)
-1. Questions
-1. Post-survey + (optional) upload your .Rmd file for the day
-
----
-
-class: inverse, center, top
-
-# Pre-survey
-
-http://bit.ly/r-at-aect-pre
-
-&lt;img src="img/survey.jpg" width="720px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -124,24 +47,6 @@ class: inverse, center, middle
 * It is a programming language and so is quite flexible
 * There is a great, inclusive community of users and developers (and teachers)
 * It is cross-platform, open-source, and freely-available
-
----
-
-class: inverse, center, middle
-
-# Download the repository
-
----
-
-# Download the repository
-
-You can access all of the workshop materials at: https://github.com/bretsw/aect19-workshop/
-
----
-
-# Download the repository
-
-&lt;img src="img/download_repo_screenshot.png" width="720px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -220,8 +125,6 @@ We only have to install a package once, but to use it, we have to load it each t
 
 &gt; A package is a like a book, a library is like a library; you use library() to check a package out of the library
 &gt; (Hadley Wickham, Chief Scientist, R Studio)
-
---- 
 
 ---
 
@@ -355,12 +258,11 @@ student_mot_vars %&gt;%
 
 ```
 ## # A tibble: 3 x 5
-##   student_efficacy student_joy student_broad_i… student_epistem…
-##              &lt;dbl&gt;       &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
-## 1            3.28       2.16              1.73             2.16 
-## 2           -0.668      0.509             0.491           -0.501
-## 3           -1.62       0.0992           -0.638           -0.193
-## # … with 1 more variable: student_instrumental_motivation &lt;dbl&gt;
+##   student_efficacy student_joy student_broad_interest student_epistemic_beliefs student_instrumental_motivation
+##              &lt;dbl&gt;       &lt;dbl&gt;                  &lt;dbl&gt;                     &lt;dbl&gt;                           &lt;dbl&gt;
+## 1            3.28       2.16                    1.73                      2.16                            0.371
+## 2           -0.668      0.509                   0.491                    -0.501                          -0.344
+## 3           -1.62       0.0992                 -0.638                    -0.193                          -1.16
 ```
 
 ---
@@ -387,13 +289,11 @@ student_responses %&gt;%
 
 ```
 ## # A tibble: 3 x 6
-##   student_efficacy student_joy student_broad_i… student_epistem…
-##              &lt;dbl&gt;       &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
-## 1            3.28       2.16              1.73             2.16 
-## 2           -0.668      0.509             0.491           -0.501
-## 3           -1.62       0.0992           -0.638           -0.193
-## # … with 2 more variables: student_instrumental_motivation &lt;dbl&gt;,
-## #   student_joy_interest &lt;dbl&gt;
+##   student_efficacy student_joy student_broad_interest student_epistemic_beliefs student_instrumental_motivation student_joy_interest
+##              &lt;dbl&gt;       &lt;dbl&gt;                  &lt;dbl&gt;                     &lt;dbl&gt;                           &lt;dbl&gt;                &lt;dbl&gt;
+## 1            3.28       2.16                    1.73                      2.16                            0.371                1.95 
+## 2           -0.668      0.509                   0.491                    -0.501                          -0.344                0.500
+## 3           -1.62       0.0992                 -0.638                    -0.193                          -1.16                -0.269
 ```
 
 ---
@@ -417,13 +317,11 @@ student_responses %&gt;%
 
 ```
 ## # A tibble: 3 x 6
-##   student_efficacy student_joy student_broad_i… student_epistem…
-##              &lt;dbl&gt;       &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
-## 1           3.28         2.16             1.73             2.16 
-## 2          -0.668        0.509            0.491           -0.501
-## 3          -0.0378       1.67             0.332            2.16 
-## # … with 2 more variables: student_instrumental_motivation &lt;dbl&gt;,
-## #   student_joy_interest &lt;dbl&gt;
+##   student_efficacy student_joy student_broad_interest student_epistemic_beliefs student_instrumental_motivation student_joy_interest
+##              &lt;dbl&gt;       &lt;dbl&gt;                  &lt;dbl&gt;                     &lt;dbl&gt;                           &lt;dbl&gt;                &lt;dbl&gt;
+## 1           3.28         2.16                   1.73                      2.16                            0.371                1.95 
+## 2          -0.668        0.509                  0.491                    -0.501                          -0.344                0.500
+## 3          -0.0378       1.67                   0.332                     2.16                            1.28                 1.00
 ```
 
 ---
@@ -650,7 +548,7 @@ student_mot_vars &lt;- # save object student_mot_vars by...
 
 Notice the three parts of all `ggplot2` graphs: a) the data (`student_mot_vars`), b) an `aes()`thetic mapping, and c) a `geom`:
 
-&lt;img src="index_files/figure-html/unnamed-chunk-33-1.png" width="450px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-30-1.png" width="450px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -664,7 +562,7 @@ ggplot(student_mot_vars,
   geom_smooth(method = "lm")
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-34-1.png" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-31-1.png" width="350px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -681,7 +579,7 @@ ggplot(student_mot_vars,
   ylab("Student Broad Interest")
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-35-1.png" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-32-1.png" width="350px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -791,10 +689,6 @@ library(lme4)
 ```
 
 ```
-## Warning: package 'lme4' was built under R version 3.5.2
-```
-
-```
 ## Loading required package: Matrix
 ```
 
@@ -804,9 +698,9 @@ library(lme4)
 ```
 
 ```
-## The following object is masked from 'package:tidyr':
+## The following objects are masked from 'package:tidyr':
 ## 
-##     expand
+##     expand, pack, unpack
 ```
 
 ```r
@@ -816,9 +710,7 @@ m2_mlm
 
 ```
 ## Linear mixed model fit by REML ['lmerMod']
-## Formula: 
-## student_epistemic_beliefs ~ student_broad_interest + student_joy +  
-##     student_broad_interest:student_joy + (1 | teacher_id)
+## Formula: student_epistemic_beliefs ~ student_broad_interest + student_joy +      student_broad_interest:student_joy + (1 | teacher_id)
 ##    Data: student_mot_vars
 ## REML criterion at convergence: 14853.02
 ## Random effects:
@@ -827,412 +719,12 @@ m2_mlm
 ##  Residual               0.9648  
 ## Number of obs: 5315, groups:  teacher_id, 176
 ## Fixed Effects:
-##                        (Intercept)              student_broad_interest  
-##                            0.16608                             0.07491  
-##                        student_joy  student_broad_interest:student_joy  
-##                            0.27409                             0.01991
+##                        (Intercept)              student_broad_interest                         student_joy  
+##                            0.16608                             0.07491                             0.27409  
+## student_broad_interest:student_joy  
+##                            0.01991
 ```
 
----
-
-class: inverse, center, middle
-
-# Afternoon 
-
----
-
-# Afternoon Agenda
-
-1. Considerations for using social media data in LD&amp;T research
-  1. Conducting ethical research
-  1. Framing the research
-  1. Organizing the research process
-  1. Collecting data
-  1. Analyzing data
-  1. Disseminating research
-  1. Learning and doing more with R
-1. Self-guided exploration (Option A: Text analysis; Option B: Social network analysis)
-1. Questions
-1. Post-survey + (optional) upload your .Rmd file for the day
-
----
-
-class: inverse, center, middle
-
-# Considerations for Using Social Media Data in Learning Design &amp; Technology Research
-
-&lt;img src="img/book.jpg" width="600px" style="display: block; margin: auto;" /&gt;
-
----
-
-# Chapter overview
-
-Our purpose in this chapter is to suggest considerations that LDT professionals should make as they use social media data in their research. 
-
----
-
-# Important notes
-
---
-
-* Our purpose is *not* to dismiss traditional research methods
-
---
-
-* There is considerable room for debate and disagreement around the proper way to conduct social media research
-
---
-
-* Our focus is not providing answers but raising questions
-
---
-
-* The issues and processes we raise are not linear; this is not a simple recipe to follow
-
---
-
-* We avoid the traditional distinction between *quantitative* and *qualitative* research, and instead suggest various other distinctions as we go
-
----
-
-class: inverse, center, middle
-
-# What's your project?
-
-&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
-
----
-
-class: inverse, center, middle
-
-# Conducting ethical research
-
----
-
-# Conducting ethical research
-
-* Often, IRBs do not flag social media work as human subjects research; however, we would suggest that it is a human phenomenon
-
---
-
-* Not a checklist, but a thorough consideration of research context and ethical principles is needed
-
---
-
-* Public vs. private
-
---
-
-* Harms and benefits
-
---
-
-* Vulnerability
-
---
-
-* Anonymity
-
---
-
-* Consent
-
---
-
-* Legal considerations
-
----
-
-class: inverse, center, middle
-
-# What ethical considerations should you examine in your project?
-
-&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
-
----
-
-class: inverse, center, middle
-
-# Framing the research
-
----
-
-# Framing the research
-
---
-
-* Paradigms and assumptions
-
---
-
-* Research design, methods, and modes of inquiry
-
---
-
-* Conceptual frameworks
-
---
-
-  * Community, network, or space?
-
---
-
-* Phenomena and units of analysis
-
----
-
-class: inverse, center, middle
-
-# How will you frame your project?
-
-&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
-
----
-
-class: inverse, center, middle
-
-# Organizing the research process
-
----
-
-# Organizing the research process
-
---
-
-* Software
-
---
-
-* Storing data
-
---
-
-* Workflows
-
---
-
-* Documentation
-
----
-
-class: inverse, center, middle
-
-# What do you need to do to organize your project?
-
-&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
-
----
-
-class: inverse, center, middle
-
-# Collecting data
-
----
-
-# Collecting data
-
---
-
-* Obtrusive or unobtrusive
-
---
-
-  * Unobtrusive: *digital traces*
-
---
-
-* Process
-
---
-
-  * Application programming interfaces (APIs)
-    * TAGS + rtweet
-  * Web scraping
-  * Accessing archives
-
---
-
-* Quantity: big vs. small
-
----
-
-class: inverse, center, middle
-
-# How will you collect data for your project?
-
-&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
-
----
-
-class: inverse, center, middle
-
-# Analyzing data
-
----
-
-# Analyzing data
-
---
-
-* Spam
-
---
-
-* Machine vs. human analysis
-
---
-
-* Networks
-
----
-
-class: inverse, center, middle
-
-# How will you analyze data for your project?
-
-&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
-
----
-
-class: inverse, center, middle
-
-# Disseminating research
-
----
-
-# Disseminating research
-
---
-
-* Sharing data
-
---
-
-* Sharing code
-
---
-
-  * TAGS + rtweet = rTAGS?
-
---
-
-  * Github (http://github.com)
-  * Open Science Framework (http://osf.io)
-
---
-
-* Publishing and publicizing research
-
-
----
-
-class: inverse, center, middle
-
-# How will you disseminate your project?
-
-&lt;img src="img/project-legos.jpg" width="600px" style="display: block; margin: auto;" /&gt;
-
----
-
-class: inverse, center, middle
-
-# Conclusion
-
----
-
-# Conclusion
-
---
-
-* The ready availability of social media data provides many opportunities...
-
---
-
-* ...but also considerable challenges for LDT researchers.
-
---
-
-* So, get familiar with the broad considerations,
-
---
-
-* and don't skip asking the important questions.
-
---
-
-* Start and end with research ethics, and revisit throughout.
-
----
-
-class: inverse, center, middle
-
-# Self-guided exploration 
-
----
-
-# How We Teach
-
-&lt;img src="img/tech_support_cheat_sheet.png" width="480px" style="display: block; margin: auto;" /&gt;
-
----
-
-# Introduction to text analysis
-
---
-
-There are all kinds of things you might wonder about the text of a document. 
-
-For instance:
-
---
-
-* How many words are in a document?
-
---
-
-* Which words are most used most often in a text?
-
---
-
-* How many times is a specific word used?
-
----
-
-# Introduction to social network analysis
-
---
-
-&lt;img src="img/csed-graph-forced-atlas8.png" width="480px" style="display: block; margin: auto;" /&gt;
-
-*A network is a set of objects, and network analysis is interested in the relationships between them.*
-
----
-
-# Introduction to social network analysis
-
-&lt;img src="img/csed-graph-forced-atlas8.png" width="480px" style="display: block; margin: auto;" /&gt;
-
-*So, what are the objects? How are they related?*
-
----
-
-# Self-guided exploration 
-
---
-
-### Option A: Text analysis (Difficulty: Moderate)
-
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/explore-on-your-own-1.Rmd) in the repository*
-
-*You can also find it in the `explore-on-your-own1.Rmd1` file*
-
---
-
-### Option B: Social network analysis (Difficulty: Hard)
-
-*The doc is [here](https://github.com/bretsw/aect19-workshop/blob/master/explore-on-your-own-2.Rmd) in the repository*
-
-*You can also find it in the `explore-on-your-own2.Rmd1` file*
 ---
 
 # Acknowledgments
@@ -1252,24 +744,10 @@ class: inverse, center, middle
 
 # Questions?
 
-Bret Staudt Willet: [staudtwi@msu.edu](mailto:staudtwi@msu.edu)  
-Spencer Greenhalgh: [spencer.greenhalgh@uky.edu](mailto:spencer.greenhalgh@uky.edu)  
 Joshua Rosenberg: [jmrosenberg@utk.edu](mailto:jmrosenberg@utk.edu)  
 
 The GitHub repository for this workshop is:
-https://github.com/bretsw/aect19-workshop
-
----
-
-class: inverse, center, top
-
-# Post-survey
-
-http://bit.ly/r-at-eact-post
-
-(optional: upload your .Rmd file of work for the day)
-
-&lt;img src="img/survey.jpg" width="720px" style="display: block; margin: auto;" /&gt;
+https://github.com/making-data-science-count/intro-to-r
 
 ---
 
@@ -1469,18 +947,18 @@ d1 %&gt;%
 
 ```
 ## # A tibble: 10 x 2
-##      var1 var2   
-##     &lt;dbl&gt; &lt;chr&gt;  
-##  1 0.102  lesser 
-##  2 0.657  greater
-##  3 0.848  greater
-##  4 0.944  greater
-##  5 0.225  lesser 
-##  6 0.0332 lesser 
-##  7 0.392  lesser 
-##  8 0.813  greater
-##  9 0.732  greater
-## 10 0.884  greater
+##     var1 var2   
+##    &lt;dbl&gt; &lt;chr&gt;  
+##  1 0.942 greater
+##  2 0.653 greater
+##  3 0.110 lesser 
+##  4 0.920 greater
+##  5 0.259 lesser 
+##  6 0.865 greater
+##  7 0.469 lesser 
+##  8 0.937 greater
+##  9 0.839 greater
+## 10 0.963 greater
 ```
 
 ---
@@ -1502,18 +980,18 @@ d1 %&gt;%
 
 ```
 ## # A tibble: 10 x 2
-##      var1 var2       
-##     &lt;dbl&gt; &lt;chr&gt;      
-##  1 0.102  very little
-##  2 0.657  greater    
-##  3 0.848  a lot      
-##  4 0.944  a lot      
-##  5 0.225  very little
-##  6 0.0332 very little
-##  7 0.392  lesser     
-##  8 0.813  a lot      
-##  9 0.732  greater    
-## 10 0.884  a lot
+##     var1 var2       
+##    &lt;dbl&gt; &lt;chr&gt;      
+##  1 0.942 a lot      
+##  2 0.653 greater    
+##  3 0.110 very little
+##  4 0.920 a lot      
+##  5 0.259 lesser     
+##  6 0.865 a lot      
+##  7 0.469 lesser     
+##  8 0.937 a lot      
+##  9 0.839 a lot      
+## 10 0.963 a lot
 ```
 
 ---
