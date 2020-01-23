@@ -2,6 +2,10 @@
 
 This presentation is by [Joshua Rosenberg](https://joshuamrosenberg.com)
 
+## RStudio Cloud
+
+https://rstudio.cloud/project/863169
+
 ## Description
 
 R is a freely-available, cross-platform, open-source programming language and statistical software environment that is well-suited to doing data science but can have a high barrier to entry. This KnoxData presentation aims to provides an introduction to using for data science, with a focus on developing a foundation in capabilities (and confidence!) that can be applied in a variety of data science contexts. It is open to anyone with an interest in R or data science. Most of the time will be spent on developing the following skills: a) Getting started with RStudio, b) and visualizing (with the ggplot2 R package), processing (with dplyr), and modeling data and presenting results (using a regression model), There are zero prerequisites, though, to get the most from the workshop, please bring your own laptop computer with you with R and RStudio installed.
