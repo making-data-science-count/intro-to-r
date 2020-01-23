@@ -25,6 +25,11 @@ library(tidyverse)
 library(xaringan)
 ```
 ---
+# RStudio Cloud
+
+https://rstudio.cloud/project/863169
+
+---
 
 # Who Am I
 
@@ -443,11 +448,9 @@ class: inverse, center, middle
 
 # Demo doc (part 2): Try it out!
 
-* Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
+* Note. Check out [R Studio Cloud](https://rstudio.cloud/project/863169) if you're having any installation trouble!*
 
 *You can find the demo doc in RStudio or in your downloaded repository files—it is titled `demo-doc.Rmd`*
-
-*The doc is also [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 

@@ -23,6 +23,11 @@ class: center, middle, inverse, title-slide
 
 
 ---
+# RStudio Cloud
+
+https://rstudio.cloud/project/863169
+
+---
 
 # Who Am I
 
@@ -509,11 +514,9 @@ class: inverse, center, middle
 
 # Demo doc (part 2): Try it out!
 
-* Note. Check out [R Studio Cloud](https://rstudio.cloud/) if you're having any installation trouble!*
+* Note. Check out [R Studio Cloud](https://rstudio.cloud/project/863169) if you're having any installation trouble!*
 
 *You can find the demo doc in RStudio or in your downloaded repository files—it is titled `demo-doc.Rmd`*
-
-*The doc is also [here](https://github.com/bretsw/aect19-workshop/blob/master/demo-doc.Rmd) in the repository*
 
 ---
 
@@ -686,24 +689,6 @@ You can then run `summary()` to view the results.
 
 ```r
 library(lme4)
-```
-
-```
-## Loading required package: Matrix
-```
-
-```
-## 
-## Attaching package: 'Matrix'
-```
-
-```
-## The following objects are masked from 'package:tidyr':
-## 
-##     expand, pack, unpack
-```
-
-```r
 m2_mlm &lt;- lmer(student_epistemic_beliefs ~ student_broad_interest + student_joy + student_broad_interest:student_joy + (1|teacher_id), data = student_mot_vars)
 m2_mlm
 ```
@@ -949,16 +934,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##     var1 var2   
 ##    &lt;dbl&gt; &lt;chr&gt;  
-##  1 0.942 greater
-##  2 0.653 greater
-##  3 0.110 lesser 
-##  4 0.920 greater
-##  5 0.259 lesser 
-##  6 0.865 greater
-##  7 0.469 lesser 
-##  8 0.937 greater
-##  9 0.839 greater
-## 10 0.963 greater
+##  1 0.862 greater
+##  2 0.524 greater
+##  3 0.615 greater
+##  4 0.275 lesser 
+##  5 0.401 lesser 
+##  6 0.218 lesser 
+##  7 0.487 lesser 
+##  8 0.561 greater
+##  9 0.522 greater
+## 10 0.560 greater
 ```
 
 ---
@@ -982,16 +967,16 @@ d1 %&gt;%
 ## # A tibble: 10 x 2
 ##     var1 var2       
 ##    &lt;dbl&gt; &lt;chr&gt;      
-##  1 0.942 a lot      
-##  2 0.653 greater    
-##  3 0.110 very little
-##  4 0.920 a lot      
-##  5 0.259 lesser     
-##  6 0.865 a lot      
-##  7 0.469 lesser     
-##  8 0.937 a lot      
-##  9 0.839 a lot      
-## 10 0.963 a lot
+##  1 0.862 a lot      
+##  2 0.524 greater    
+##  3 0.615 greater    
+##  4 0.275 lesser     
+##  5 0.401 lesser     
+##  6 0.218 very little
+##  7 0.487 lesser     
+##  8 0.561 greater    
+##  9 0.522 greater    
+## 10 0.560 greater
 ```
 
 ---
